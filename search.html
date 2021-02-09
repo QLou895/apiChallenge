@@ -1,18 +1,57 @@
-<!-- Users will be able to select 4 options and be able to click a button and see a reasult returned -->
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
+    <head>
+    <title>Bored?</title>
+    <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Looking for something todo?</title>
-</head>
-<body>
-    <form>
-        <dropbox id="actType"></dropbox>
-        <dropbox id="maxPrice"></dropbox>
-        <dropbox id="pplAmt"></dropbox>
-        <dropbox id="access"></dropbox>
-    </form>
-    <button id="smallBtn">Search</button>
-</body>
+    <link rel="stylesheet" href="scss/main.css">
+    </head>
+    <body>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="random.html">Random</a></li>
+                <li><a href="search.html">Search</a></li>
+                <li><a href="toppicks.html">Top Picks</a></li>
+            </ul>
+        </nav>
+        <header>
+            <h1>Search</h1>
+        </header>
+
+        <main>
+            <form action="">
+                <select name="type" id="type">
+                    <option hidden selected value="null">type of activity</option>
+                </select>
+                <select name="minprice" id="minprice">
+                    <option hidden selected value="null">minimum price</option>
+                </select>
+                <select name="maxprice" id="maxprice">
+                    <option hidden selected value="null">maximum price</option>
+                </select>
+                <select name="part" id="part">
+                    <option hidden selected value="null">participants</option>
+                </select>
+                <select name="access" id="access">
+                    <option hidden selected value="null">accessibility</option>
+                </select>
+                <button id="searchButton">search</button>
+            </form>
+        </main>
+
+        <footer>
+            <div class="footerContainer">
+                <div class="footerContent">
+                  <p class="footerText">Group-D &copy; 2021</p>
+                  <p class="footerText">Shelly Penichet | Lou Q | Remy's Name | Grace Hechavarria</p>
+                  <div id="footerSocial"> 
+                      <a href="https://github.com/QLou895/apiChallenge" target="_blank">Github</a>
+                  </div>
+                </div>
+              </div>
+        </footer>
+
+        <script src="js/scripts.js"></script>
+    </body>
 </html>
