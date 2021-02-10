@@ -27,6 +27,13 @@ main {
   height: auto;
 }
 
+footer {
+  background-color: #000;
+  width: 100%;
+  padding: 3em;
+  text-align: center;
+}
+
 @use "sass:map";
 .grid-container {
   display: -ms-grid;
@@ -49,6 +56,8 @@ main {
   background-color: #000;
   height: 100vh;
   width: 100%;
+  margin: 0;
+  padding: 0;
   display: -ms-grid;
   display: grid;
   place-items: center;
@@ -72,6 +81,9 @@ main {
   display: inline-table;
   height: 100%;
   width: 100%;
+  border: 0;
+  text-decoration: none;
+  outline: none;
 }
 
 .grid-container .random {
@@ -90,13 +102,13 @@ main {
   background-color: black;
   background: url("../assets/spiderman.jpg") center center no-repeat;
   background-size: cover;
-  -webkit-box-shadow: inset 0 0 0 100vw rgba(146, 27, 145, 0.8);
-          box-shadow: inset 0 0 0 100vw rgba(146, 27, 145, 0.8);
+  -webkit-box-shadow: inset 0 0 0 100vw rgba(146, 27, 145, 0.9);
+          box-shadow: inset 0 0 0 100vw rgba(146, 27, 145, 0.9);
 }
 
 .grid-container .random:hover {
-  -webkit-box-shadow: inset 0 0 0 100vw rgba(146, 27, 145, 0.95);
-          box-shadow: inset 0 0 0 100vw rgba(146, 27, 145, 0.95);
+  -webkit-box-shadow: inset 0 0 0 100vw rgba(146, 27, 145, 0.97);
+          box-shadow: inset 0 0 0 100vw rgba(146, 27, 145, 0.97);
   overflow: hidden;
   -webkit-transform: scale(1.1);
           transform: scale(1.1);
@@ -109,6 +121,9 @@ main {
   display: inline-table;
   height: 100%;
   width: 100%;
+  border: 0;
+  text-decoration: none;
+  outline: none;
 }
 
 .grid-container .search {
@@ -127,13 +142,13 @@ main {
   background-color: black;
   background: url("../assets/puzzle.jpg") center center no-repeat;
   background-size: cover;
-  -webkit-box-shadow: inset 0 0 0 100vw rgba(35, 47, 181, 0.8);
-          box-shadow: inset 0 0 0 100vw rgba(35, 47, 181, 0.8);
+  -webkit-box-shadow: inset 0 0 0 100vw rgba(35, 47, 181, 0.9);
+          box-shadow: inset 0 0 0 100vw rgba(35, 47, 181, 0.9);
 }
 
 .grid-container .search:hover {
-  -webkit-box-shadow: inset 0 0 0 100vw rgba(35, 47, 181, 0.95);
-          box-shadow: inset 0 0 0 100vw rgba(35, 47, 181, 0.95);
+  -webkit-box-shadow: inset 0 0 0 100vw rgba(35, 47, 181, 0.97);
+          box-shadow: inset 0 0 0 100vw rgba(35, 47, 181, 0.97);
   overflow: hidden;
   -webkit-transform: scale(1.1);
           transform: scale(1.1);
@@ -146,6 +161,9 @@ main {
   display: inline-table;
   height: 100%;
   width: 100%;
+  border: 0;
+  text-decoration: none;
+  outline: none;
 }
 
 .grid-container .topPicks {
@@ -164,13 +182,13 @@ main {
   background-color: black;
   background: url("../assets/covidmask.jpg") center center no-repeat;
   background-size: cover;
-  -webkit-box-shadow: inset 0 0 0 100vw rgba(90, 38, 165, 0.8);
-          box-shadow: inset 0 0 0 100vw rgba(90, 38, 165, 0.8);
+  -webkit-box-shadow: inset 0 0 0 100vw rgba(90, 38, 165, 0.9);
+          box-shadow: inset 0 0 0 100vw rgba(90, 38, 165, 0.9);
 }
 
 .grid-container .topPicks:hover {
-  -webkit-box-shadow: inset 0 0 0 100vw rgba(90, 38, 165, 0.95);
-          box-shadow: inset 0 0 0 100vw rgba(90, 38, 165, 0.95);
+  -webkit-box-shadow: inset 0 0 0 100vw rgba(90, 38, 165, 0.97);
+          box-shadow: inset 0 0 0 100vw rgba(90, 38, 165, 0.97);
   overflow: hidden;
   -webkit-transform: scale(1.1);
           transform: scale(1.1);
@@ -183,5 +201,8 @@ main {
   display: inline-table;
   height: 100%;
   width: 100%;
+  border: 0;
+  text-decoration: none;
+  outline: none;
 }
 /*# sourceMappingURL=main.css.map */

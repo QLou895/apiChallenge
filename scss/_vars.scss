@@ -25,6 +25,9 @@ $themeColors: (
     display: inline-table;
     height: 100%;    
     width: 100%;
+    border:0; 
+    text-decoration:none; 
+    outline:none;
 }
 
 @mixin linkGridImage($image, $size){
