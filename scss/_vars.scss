@@ -1,7 +1,33 @@
-$pink: #921B91;
-$blue: #232FB5;
-$purple: #5A26A5;
+$themeColors: (
+    pink: #921B91,
+    blue: #232FB5,
+    purple: #5A26A5,
 
-$darkPink: #731A73;
-$darkBlue: #2A349F;
-$darkPurple: #552C91;
+    darkPink: #731A73,
+    darkBlue: #2A349F,
+    darkPurple: #552C91,
+);
+
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Megrim&family=Notable&family=Yeseva+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap');
+
+@mixin titleFont{
+    // font-family: 'Abril Fatface', cursive;
+    font-family: 'Notable', sans-serif;
+    /*
+    needs:
+        font size
+        margin
+    */
+}
+
+@mixin linkGrid{
+    display: inline-table;
+    height: 100%;    
+    width: 100%;
+}
+
+@mixin linkGridSVG($image, $size){
+    background: url($image) center center no-repeat;
+    background-size: $size;
+}

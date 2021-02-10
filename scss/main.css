@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Megrim&family=Notable&family=Yeseva+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap");
 * {
   margin: auto;
   padding: 0;
@@ -12,6 +14,7 @@ body {
   height: 100%;
   width: 100%;
   margin: 0;
+  color: #fff;
 }
 
 header {
@@ -24,29 +27,130 @@ main {
   height: auto;
 }
 
-* {
-  margin: auto;
+@use "sass:map";
+.grid-container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 0.6fr 1.05fr 1.05fr 1.05fr 1.05fr 1.05fr 1.05fr;
+      grid-template-columns: 0.6fr 1.05fr 1.05fr 1.05fr 1.05fr 1.05fr 1.05fr;
+  -ms-grid-rows: 1fr 1fr 1fr;
+      grid-template-rows: 1fr 1fr 1fr;
+  gap: 0px 0px;
+      grid-template-areas: "myheader random random search search topPicks topPicks" "myheader random random search search topPicks topPicks" "myheader random random search search topPicks topPicks";
+}
+
+.grid-container .myheader {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 3;
+  -ms-grid-column: 1;
+  grid-area: myheader;
+  background-color: #000;
+  height: 100vh;
+  width: 100%;
+  min-width: overflow;
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+}
+
+.grid-container .myheader #homeTitle {
+  font-family: 'Notable', sans-serif;
+  /*
+    needs:
+        font size
+        margin
+    */
+  font-size: 4em;
+  margin: 0;
   padding: 0;
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
 }
 
-html {
-  scroll-behavior: smooth;
-}
-
-body {
-  font-family: 'open sans', sans-serif;
+.grid-container .myheader .homeLink {
+  display: inline-table;
   height: 100%;
   width: 100%;
-  margin: 0;
 }
 
-header {
+.grid-container .random {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 3;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 2;
+  grid-area: random;
+  height: 100vh;
   width: 100%;
-  height: auto;
+  background: url("../assets/spiderman.jpg") center center no-repeat;
+  background-size: cover;
+  -webkit-box-shadow: inset 0 0 0 100vw rgba(146, 27, 145, 0.8);
+          box-shadow: inset 0 0 0 100vw rgba(146, 27, 145, 0.8);
 }
 
-main {
+.grid-container .random:hover {
+  -webkit-box-shadow: inset 0 0 0 100vw rgba(146, 27, 145, 0.95);
+          box-shadow: inset 0 0 0 100vw rgba(146, 27, 145, 0.95);
+}
+
+.grid-container .random .homeLink {
+  background: url("../assets/spiderman.jpg") center center no-repeat;
+  background-size: 30%;
+  display: inline-table;
+  height: 100%;
   width: 100%;
-  height: auto;
+}
+
+.grid-container .search {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 3;
+  -ms-grid-column: 4;
+  -ms-grid-column-span: 2;
+  grid-area: search;
+  height: 100vh;
+  width: 100%;
+  background: url("../assets/puzzle.jpg") center center no-repeat;
+  background-size: cover;
+  -webkit-box-shadow: inset 0 0 0 100vw rgba(35, 47, 181, 0.8);
+          box-shadow: inset 0 0 0 100vw rgba(35, 47, 181, 0.8);
+}
+
+.grid-container .search:hover {
+  -webkit-box-shadow: inset 0 0 0 100vw rgba(35, 47, 181, 0.95);
+          box-shadow: inset 0 0 0 100vw rgba(35, 47, 181, 0.95);
+}
+
+.grid-container .search .homeLink {
+  background: url("../assets/puzzle.jpg") center center no-repeat;
+  background-size: 30%;
+  display: inline-table;
+  height: 100%;
+  width: 100%;
+}
+
+.grid-container .topPicks {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 3;
+  -ms-grid-column: 6;
+  -ms-grid-column-span: 2;
+  grid-area: topPicks;
+  height: 100vh;
+  width: 100%;
+  background: url("../assets/covidmask.jpg") center center no-repeat;
+  background-size: cover;
+  -webkit-box-shadow: inset 0 0 0 100vw rgba(90, 38, 165, 0.8);
+          box-shadow: inset 0 0 0 100vw rgba(90, 38, 165, 0.8);
+}
+
+.grid-container .topPicks:hover {
+  -webkit-box-shadow: inset 0 0 0 100vw rgba(90, 38, 165, 0.95);
+          box-shadow: inset 0 0 0 100vw rgba(90, 38, 165, 0.95);
+}
+
+.grid-container .topPicks .homeLink {
+  background: url("../assets/covidmask.jpg") center center no-repeat;
+  background-size: 30%;
+  display: inline-table;
+  height: 100%;
+  width: 100%;
 }
 /*# sourceMappingURL=main.css.map */
