@@ -100,8 +100,6 @@ main {
   overflow: hidden;
   -webkit-transform: scale(1.1);
           transform: scale(1.1);
-  -webkit-backdrop-filter: blur(4px);
-          backdrop-filter: blur(4px);
 }
 
 .grid-container .random .homeLink {

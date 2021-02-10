@@ -25,4 +25,11 @@ main{
   height: auto;
 }
 
+footer{
+    background-color: #000;
+    width: 100%;
+    padding: 3em;
+    text-align: center;
+}
+
 @import '_index.scss', '_random.scss', '_search.scss', '_toppicks.scss';
