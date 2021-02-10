@@ -27,7 +27,8 @@ $themeColors: (
     width: 100%;
 }
 
-@mixin linkGridSVG($image, $size){
+@mixin linkGridImage($image, $size){
+    background-color: black; //fallback color
     background: url($image) center center no-repeat;
     background-size: $size;
 }
