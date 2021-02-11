@@ -12,6 +12,7 @@ body{
   height: 100%;
   width: 100%;
   margin: 0;
+  color: #fff;
 }
 
 header{
@@ -23,3 +24,12 @@ main{
   width: 100%;
   height: auto;
 }
+
+footer{
+    background-color: #000;
+    width: 100%;
+    padding: 3em;
+    text-align: center;
+}
+
+@import '_index.scss', '_random.scss', '_search.scss', '_toppicks.scss';
