@@ -1,3 +1,6 @@
+@import '_index.scss', '_random.scss', '_search.scss', '_toppicks.scss', '_vars.scss';
+@import url('https://fonts.googleapis.com/css2?family=Aclonica&display=swap');
+
 * {
   margin: auto;
   padding: 0;
@@ -32,4 +35,112 @@ footer{
     text-align: center;
 }
 
-@import '_index.scss', '_random.scss', '_search.scss', '_toppicks.scss';
+
+/*NAV*/
+/* header */
+nav {
+  background-color: #000;
+  box-shadow: 1px 1px 4px 0 rgba(0,0,0,.1);
+  position: fixed;
+  width: 100%;
+  z-index: 3;
+}
+
+nav ul {
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  overflow: hidden;
+  background-color: #000;
+}
+
+nav li a {
+  color: #fff;
+  display: block;
+  padding: 20px 20px;
+  text-decoration: none;
+}
+
+nav li a:hover {
+  background-color: rgb(99, 30, 139);
+}
+
+nav .logo {
+  display: none;
+  /* display: block; */
+  color: #fff;
+  font-family: 'Aclonica', sans-serif;
+  letter-spacing: 2px;
+  float: left;
+  font-size: 2.2em;
+  padding: 20px 30px;
+  text-decoration: none;
+}
+
+/* menu */
+nav .menu {
+  clear: both;
+  max-height: 0;
+  transition: max-height .2s ease-out;
+}
+
+/* menu icon */
+nav .menu-icon {
+  cursor: pointer;
+  float: right;
+  padding: 35px 30px;
+  position: relative;
+  user-select: none;
+}
+
+nav .menu-icon .nav-icon {
+  background: #fff;
+  display: block;
+  height: 6px;
+  position: relative;
+  transition: background .2s ease-out;
+  width: 55px;
+}
+
+nav .menu-icon .nav-icon:before,
+nav .menu-icon .nav-icon:after {
+  background: #fff;
+  content: '';
+  display: block;
+  height: 100%;
+  position: absolute;
+  transition: all .2s ease-out;
+  width: 100%;
+}
+
+nav .menu-icon .nav-icon:before {
+  top: 14px;
+}
+
+nav .menu-icon .nav-icon:after {
+  top: -14px;
+}
+
+/* menu btn */
+nav .menu-btn {
+  display: none;
+}
+
+nav .menu-btn:checked ~ .menu {
+  max-height: 240px;
+}
+
+nav .menu-btn:checked ~ .menu-icon .nav-icon {
+  background: transparent;
+}
+
+nav .menu-btn:checked ~ .menu-icon .nav-icon:before {
+  transform: rotate(-45deg);
+  top:0;
+}
+
+nav .menu-btn:checked ~ .menu-icon .nav-icon:after {
+  transform: rotate(45deg);
+  top:0;
+}
