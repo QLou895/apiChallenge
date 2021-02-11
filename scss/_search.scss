@@ -1,5 +1,8 @@
 //The  stlyles for the search page
 body {
+  header {
+    text-align: center;
+  }
   background-color: map-get($themeColors, darkblue);
 }
 //styles for the main

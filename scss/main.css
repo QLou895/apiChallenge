@@ -236,6 +236,10 @@ body {
   background-color: #2A349F;
 }
 
+body header {
+  text-align: center;
+}
+
 #main {
   height: 100vh;
 }
