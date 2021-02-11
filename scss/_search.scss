@@ -2,8 +2,9 @@
 body {
   background-color: map-get($themeColors, darkblue);
 }
-//styles for the footer
-footer {
+//styles for the main
+#main {
+  height: 100vh;
 }
 
 #menuList {

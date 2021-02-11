@@ -236,6 +236,10 @@ body {
   background-color: #2A349F;
 }
 
+#main {
+  height: 100vh;
+}
+
 #menuList {
   display: -webkit-box;
   display: -ms-flexbox;
