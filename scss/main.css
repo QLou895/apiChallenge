@@ -200,6 +200,28 @@
   outline: none;
 }
 
+body {
+  background-color: #2A349F;
+}
+
+#main {
+  height: 100vh;
+}
+
+#menuList {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 45%;
+}
+
 * {
   margin: auto;
   padding: 0;
