@@ -1,5 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Megrim&family=Notable&family=Yeseva+One&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Aclonica&display=swap");
 * {
   margin: auto;
   padding: 0;
@@ -58,19 +57,25 @@ footer {
   width: 100%;
   margin: 0;
   padding: 0;
-  display: -ms-grid;
-  display: grid;
+  min-width: 0px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   place-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .grid-container .myheader #homeTitle {
-  font-family: 'Notable', sans-serif;
-  /*
-    needs:
-        font size
-        margin
-    */
-  font-size: 4em;
+  font-family: 'Aclonica', sans-serif;
+  letter-spacing: 2px;
+  font-size: 4.5em;
+  letter-spacing: 2px;
   margin: 0;
   padding: 0;
   -webkit-transform: rotate(90deg);
@@ -117,7 +122,7 @@ footer {
 .grid-container .random .homeLink {
   background-color: black;
   background: url("../assets/spiderman.jpg") center center no-repeat;
-  background-size: 30%;
+  background-size: 40%;
   display: inline-table;
   height: 100%;
   width: 100%;
@@ -157,7 +162,7 @@ footer {
 .grid-container .search .homeLink {
   background-color: black;
   background: url("../assets/puzzle.jpg") center center no-repeat;
-  background-size: 30%;
+  background-size: 40%;
   display: inline-table;
   height: 100%;
   width: 100%;
@@ -197,7 +202,7 @@ footer {
 .grid-container .topPicks .homeLink {
   background-color: black;
   background: url("../assets/covidmask.jpg") center center no-repeat;
-  background-size: 30%;
+  background-size: 40%;
   display: inline-table;
   height: 100%;
   width: 100%;

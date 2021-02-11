@@ -19,13 +19,14 @@
         width: 100%;
         margin:0 ;
         padding: 0;
-        // min-width: 0;
-        display: grid;
+        min-width: 0px;
+        display: flex;
         place-items: center;
+        flex-direction: column;
+        justify-content: center;
         #homeTitle{
-            @include titleFont;
-            // letter-spacing: 15px;
-            font-size: 4em;
+            @include titleFont(4.5em);
+            letter-spacing: 2px;
             margin: 0;
             padding: 0;
             transform: rotate(90deg);
@@ -52,7 +53,7 @@
             transform: scale(1.1);
         }
         .homeLink{
-            @include linkGridImage("../assets/spiderman.jpg", 30%);
+            @include linkGridImage("../assets/spiderman.jpg", 40%);
             @include linkGrid;
         }
     }
@@ -74,7 +75,7 @@
             transform: scale(1.1);
         }
         .homeLink{
-            @include linkGridImage("../assets/puzzle.jpg", 30%);
+            @include linkGridImage("../assets/puzzle.jpg", 40%);
             @include linkGrid;
         }
     }
@@ -96,7 +97,7 @@
             transform: scale(1.1);
         }
         .homeLink{
-            @include linkGridImage("../assets/covidmask.jpg", 30%);
+            @include linkGridImage("../assets/covidmask.jpg", 40%);
             @include linkGrid;
         }
     }

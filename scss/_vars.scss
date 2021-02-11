@@ -8,17 +8,12 @@ $themeColors: (
     darkPurple: #552C91,
 );
 
-@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Megrim&family=Notable&family=Yeseva+One&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Aclonica&display=swap');
 
-@mixin titleFont{
-    // font-family: 'Abril Fatface', cursive;
-    font-family: 'Notable', sans-serif;
-    /*
-    needs:
-        font size
-        margin
-    */
+@mixin titleFont($size){
+    font-family: 'Aclonica', sans-serif;
+    letter-spacing: 2px;
+    font-size: $size;
 }
 
 @mixin linkGrid{
