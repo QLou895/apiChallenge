@@ -1,0 +1,14 @@
+//The  stlyles for the search page
+body {
+  background-color: map-get($themeColors, darkblue);
+}
+//styles for the footer
+footer {
+}
+
+#menuList {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  width: 45%;
+}

@@ -19,11 +19,11 @@
             </ul>
         </nav>
         <header>
-            <h1>Search</h1>
+            <h1>Search Activity</h1>
         </header>
 
         <main>
-            <form action="" method="POST">
+            <form action="" method="POST" id="menuList">
                 <!-- this dropdown list allows the user to select an activity  -->
                 <select name="type" id="type">
                     <option hidden selected value="null">type of activity</option>
@@ -48,7 +48,7 @@
                 <!-- the most a user wants to spend -->
                 <select name="maxprice" id="maxprice">
                     <option hidden selected value="null">Maximum Price</option> 
-                    <option value="0.5">***</option>
+                    <option value="0.5">****</option>
                     <option value="0.75"></option>
                     <option value="1.0"></option>
                 </select>
@@ -78,9 +78,7 @@
 
                 <button id="searchButton">Search</button>
             </form>
-
         </main>
-
         <footer>
             <div class="footerContainer">
                 <div class="footerContent">
