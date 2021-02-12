@@ -216,8 +216,13 @@ html {
   scroll-behavior: smooth;
 }
 
+@font-face {
+  font-family: Calibri;
+  src: url("../assets/Calibri.ttf");
+}
+
 body {
-  font-family: 'open sans', sans-serif;
+  font-family: Calibri;
   height: 100%;
   width: 100%;
   margin: 0;
@@ -264,12 +269,14 @@ nav ul {
 nav li a {
   color: #fff;
   display: block;
-  padding: 20px 20px;
+  padding: 30px 30px;
   text-decoration: none;
+  font-size: 2em;
+  text-transform: uppercase;
 }
 
 nav li a:hover {
-  background-color: #631e8b;
+  background-color: #121212;
 }
 
 nav .logo {
@@ -340,7 +347,7 @@ nav .menu-btn {
 }
 
 nav .menu-btn:checked ~ .menu {
-  max-height: 240px;
+  max-height: 100%;
 }
 
 nav .menu-btn:checked ~ .menu-icon .nav-icon {
