@@ -44,6 +44,10 @@
   letter-spacing: 2px;
   font-size: 4.7em;
   letter-spacing: 2px;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
   margin: 0;
   padding: 0;
   -webkit-transform: rotate(90deg);
@@ -67,6 +71,7 @@
   grid-area: random;
   height: 100vh;
   width: 100%;
+  background-color: #921B91;
   overflow: hidden;
   -webkit-transform: scale(1);
           transform: scale(1);
@@ -114,6 +119,7 @@
   grid-area: search;
   height: 100vh;
   width: 100%;
+  background-color: #232FB5;
   overflow: hidden;
   -webkit-transform: scale(1);
           transform: scale(1);
@@ -161,6 +167,7 @@
   grid-area: topPicks;
   height: 100vh;
   width: 100%;
+  background-color: #5A26A5;
   overflow: hidden;
   -webkit-transform: scale(1);
           transform: scale(1);
