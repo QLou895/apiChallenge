@@ -25,7 +25,7 @@
         flex-direction: column;
         justify-content: center;
         #homeTitle{
-            @include titleFont(4.5em);
+            @include titleFont(4.7em);
             letter-spacing: 2px;
             margin: 0;
             padding: 0;
@@ -57,7 +57,7 @@
             }
         }
         .homeLink{
-            @include linkGridImage("../assets/spiderman.jpg", 40%);
+            @include linkGridImage("../assets/random.svg", 40%);
             @include linkGrid;
         }
     }
@@ -83,7 +83,7 @@
             }
         }
         .homeLink{
-            @include linkGridImage("../assets/puzzle.jpg", 40%);
+            @include linkGridImage("../assets/search.svg", 40%);
             @include linkGrid;
         }
     }
@@ -109,7 +109,7 @@
             }
         }
         .homeLink{
-            @include linkGridImage("../assets/covidmask.jpg", 40%);
+            @include linkGridImage("../assets/toppicks.svg", 40%);
             @include linkGrid;
         }
     }

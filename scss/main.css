@@ -42,7 +42,7 @@
 .grid-container .myheader #homeTitle {
   font-family: 'Aclonica', sans-serif;
   letter-spacing: 2px;
-  font-size: 4.5em;
+  font-size: 4.7em;
   letter-spacing: 2px;
   margin: 0;
   padding: 0;
@@ -96,7 +96,7 @@
 
 .grid-container .random .homeLink {
   background-color: black;
-  background: url("../assets/spiderman.jpg") center center no-repeat;
+  background: url("../assets/random.svg") center center no-repeat;
   background-size: 40%;
   display: inline-table;
   height: 100%;
@@ -143,7 +143,7 @@
 
 .grid-container .search .homeLink {
   background-color: black;
-  background: url("../assets/puzzle.jpg") center center no-repeat;
+  background: url("../assets/search.svg") center center no-repeat;
   background-size: 40%;
   display: inline-table;
   height: 100%;
@@ -190,7 +190,7 @@
 
 .grid-container .topPicks .homeLink {
   background-color: black;
-  background: url("../assets/covidmask.jpg") center center no-repeat;
+  background: url("../assets/toppicks.svg") center center no-repeat;
   background-size: 40%;
   display: inline-table;
   height: 100%;
