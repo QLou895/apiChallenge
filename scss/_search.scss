@@ -7,9 +7,77 @@ body {
   height: 100vh;
 }
 
-#menuList {
+#uInput {
   display: flex;
   flex-flow: row nowrap;
   justify-content: center;
   width: 45%;
+  margin: 80px;
 }
+
+/***************************************** the styles for the drop down ***************/
+/*
+.select-ctr {
+  @include position(absolute, 50% x x 50%);
+  @include transform(translate(-50%, -50%));
+  width: 350px;
+  height: 370px;
+  font-family:"Roboto";
+  
+  > div {
+    padding: 15px 20px;
+    position: absolute;
+    width: 100%;
+    font-size: 1.25rem;
+    cursor: pointer;
+  }
+  
+  $num: 5;
+
+  @while $num > 0 {
+      .input-#{$num} {
+          top: #{$num*60}px;
+      }
+      $num: $num - 1;
+  }
+  
+  > div.input {
+    background: #fff;
+    color: #777;
+    border-radius: 2px;
+    box-shadow: 0 2px 15px 3px rgba(0, 0, 0, 0.1) 
+  }
+  
+  > div.input.active {
+    color: #1D77EF;
+  }
+  
+  > div.input-preview {
+    color: rgba(255,255,255,.75);;
+    position: relative;
+    transition: .3s all ease;
+    
+    &.active {
+      color: rgba(255,255,255,1);
+    }
+    
+    &:before {
+      content:"";
+      @include position(absolute, 18px 20px 20px x);
+      width: 20px;
+      background: rgba(255,255,255,.75);
+-webkit-clip-path: polygon(50% 73%, 0 0, 100% 0);
+clip-path: polygon(50% 73%, 0 0, 100% 0);
+      padding: 10px;
+      box-sizing: border-box;
+      transition: .3s all ease;
+    }
+    
+    &.active:before {
+      background: rgba(255,255,255,1);
+      -webkit-clip-path: polygon(50% 0, 0 73%, 100% 73%);
+clip-path: polygon(50% 0, 0 73%, 100% 73%);
+    }
+  } 
+}
+*/

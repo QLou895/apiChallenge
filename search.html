@@ -5,6 +5,8 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="scss/main.css">
+    <script defer type="text/javascript" src="js/script.js"></script>
+
     </head>
     <body>
         <nav>
@@ -23,11 +25,11 @@
         </header>
 
     <main id="main">
-        
-        <form action="" method="POST" id="menuList">
+
+        <form name="uInput" id="uInput">
             <!-- this dropdown list allows the user to select an activity  -->
             <select name="type" id="type">
-                <option hidden selected value="null">type of activity</option>
+                <option hidden selected value="">type of activity</option>
                 <option value="education">Education</option>
                 <option value="recreational">Recreational</option>
                 <option value="social">Social</option>
@@ -40,23 +42,23 @@
     
             <!-- the least a user wants to spend -->
             <select name="minprice" id="minprice">
-                <option hidden selected value="null">Minimum Price</option>
-                <option value="0.0">*</option>
-                <option value="0.2">**</option>
-                <option value="0.3">****</option>
+                <option hidden selected value="0.0">Minimum Price</option>
+                <option value="0.0">Free</option>
+                <option value="0.2">$15-25</option>
+                <option value="0.3">$25-35</option>
             </select>
     
             <!-- the most a user wants to spend -->
             <select name="maxprice" id="maxprice">
-                <option hidden selected value="null">Maximum Price</option>
-                <option value="0.5">****</option>
-                <option value="0.75"></option>
-                <option value="1.0"></option>
+                <option hidden selected value="0.0">Maximum Price</option>
+                <option value="0.5">$35-45</option>
+                <option value="0.75">$55-65</option>
+                <option value="1.0">$65+</option>
             </select>
     
             <!-- this is dropdown list will allow the user to select the quantity of their party -->
             <select name="part" id="part">
-                <option hidden selected value="null">participants</option>
+                <option hidden selected value="0">participants</option>
                 <option value="1">1</option>
                 <option value="2">2</option>
                 <option value="3">3</option>
@@ -71,8 +73,8 @@
     
             <!-- the possibility of an event -->
             <select name="access" id="access">
-                <option hidden selected value="null">Accessibility</option>
-                <option value="0.0">Effortless</option>
+                <option hidden selected value="0.0">Accessibility</option>
+                <option value="0.25">Effortless</option>
                 <option value="0.5">Moderate</option>
                 <option value="1.0">Concetrated</option>
             </select>
@@ -94,6 +96,5 @@
             </div>
         </footer>
 
-        <script src="js/scripts.js"></script>
     </body>
 </html>
