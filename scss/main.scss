@@ -27,6 +27,13 @@ header {
 main {
   width: 100%;
   height: auto;
+  form {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    width: 45%;
+    margin: 80px;
+  }
 }
 
 footer {
