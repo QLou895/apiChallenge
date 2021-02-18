@@ -16,6 +16,18 @@ $themeColors: (
     font-size: $size;
 }
 
+@font-face{
+    font-family: Britanic;
+    src: url('../assets/BRITANIC.TTF');
+}
+
+@mixin h1Font($size){
+
+    letter-spacing: 2px;
+    font-size: $size;
+    font-family: Britanic;
+}
+
 @mixin linkGrid{
     display: inline-table;
     height: 100%;    

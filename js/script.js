@@ -9,7 +9,7 @@ async function generateData(){
     console.log(data);
     
     const typeUpper = data.type[0].toUpperCase() + data.type.substring(1);
-    doc_div.innerHTML = "Key: " + data.key + "<br>Activity: " + data.activity + "<br>Price: " + data.price + "<br>Participants: " + data.participants + "<br>Type: " + typeUpper + "<br>Accessibility: " + data.accessibility;
+    doc_div.innerHTML = "<br>Activity: " + data.activity + "<br>Accessibility: " + data.accessibility + "<br>Type: " + typeUpper + "<br>Participants: " + data.participants + "<br>Price: " + data.price;
 
 }
 

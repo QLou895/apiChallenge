@@ -1,0 +1,20 @@
+@import '_vars.scss'; 
+@use "sass:map";
+
+
+#random {
+    background-color: map-get($themeColors, purple);
+
+    .pageMargin {
+        padding-top: 12em;
+    }
+
+    h1 {
+        @include h1Font(4em);
+    }
+
+    .mainBodySizing { 
+        height: 100vh;
+    }
+}
+

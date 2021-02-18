@@ -1,6 +1,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Aclonica&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Aclonica&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Aclonica&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Aclonica&display=swap");
+@font-face {
+  font-family: Britanic;
+  src: url("../assets/BRITANIC.TTF");
+}
+
 @use "sass:map";
 .grid-container {
   display: -ms-grid;
@@ -205,6 +211,35 @@
   border: 0;
   text-decoration: none;
   outline: none;
+}
+
+@font-face {
+  font-family: Britanic;
+  src: url("../assets/BRITANIC.TTF");
+}
+
+@use "sass:map";
+#random {
+  background-color: #5A26A5;
+}
+
+#random .pageMargin {
+  padding-top: 12em;
+}
+
+#random h1 {
+  letter-spacing: 2px;
+  font-size: 4em;
+  font-family: Britanic;
+}
+
+#random .mainBodySizing {
+  height: 100vh;
+}
+
+@font-face {
+  font-family: Britanic;
+  src: url("../assets/BRITANIC.TTF");
 }
 
 * {
