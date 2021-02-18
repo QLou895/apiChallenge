@@ -23,16 +23,6 @@ $themeColors: (
     font-family: Britanic;
 }
 
-@font-face{
-    font-family: Consolas;
-    src: url('../assets/CONSOLA.TTF');
-}
-
-@mixin apiDataTitles{
-    font-family: Consolas;
-    font-weight: 700;
-}
-
 @mixin linkGrid{
     display: inline-table;
     height: 100%;    
