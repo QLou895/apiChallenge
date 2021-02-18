@@ -42,3 +42,7 @@ $themeColors: (
     background: url($image) center center no-repeat;
     background-size: $size;
 }
+
+@mixin pageMargin{
+    padding-top: 12em;
+}
