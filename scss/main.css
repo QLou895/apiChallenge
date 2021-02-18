@@ -3,6 +3,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Aclonica&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Aclonica&display=swap");
 @font-face {
+  font-family: Consolas;
+  src: url("../assets/Consola.TTF");
+}
+
+@font-face {
   font-family: Britanic;
   src: url("../assets/BRITANIC.TTF");
 }
@@ -214,6 +219,11 @@
 }
 
 @font-face {
+  font-family: Consolas;
+  src: url("../assets/Consola.TTF");
+}
+
+@font-face {
   font-family: Britanic;
   src: url("../assets/BRITANIC.TTF");
 }
@@ -235,6 +245,11 @@
 
 #random .mainBodySizing {
   height: 100vh;
+}
+
+@font-face {
+  font-family: Consolas;
+  src: url("../assets/Consola.TTF");
 }
 
 @font-face {
