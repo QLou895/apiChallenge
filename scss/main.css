@@ -296,6 +296,14 @@ footer {
   text-align: center;
 }
 
+footer .footerText {
+  font-size: 1.3em;
+}
+
+footer img {
+  padding-top: 5px;
+}
+
 /*NAV*/
 /* header */
 nav {
