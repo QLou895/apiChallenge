@@ -25,7 +25,7 @@
         flex-direction: column;
         justify-content: center;
         #homeTitle{
-            @include titleFont(4.7em);
+            @include h1Font(6em);
             letter-spacing: 2px;
             user-select: none;
             margin: 0;
