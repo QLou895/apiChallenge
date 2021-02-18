@@ -1,10 +1,10 @@
-document.querySelector("github").onmouseover = function() {leftmouseOver()};
-document.querySelector("github").onmouseout = function() {leftmouseOut()};
+document.getElementById("github").onmouseover = function() {githubmouseOver()};
+document.getElementById("github").onmouseout = function() {githubmouseOut()};
 
-function leftmouseOver() {
-    document.querySelector("github").src = "assets/github2.svg";
+function githubmouseOver() {
+    document.getElementById("github").src = "assets/github2.svg";
 }
 
-function leftmouseOut() {
-    document.querySelector("github").src = "assets/github.svg";
+function githubmouseOut() {
+    document.getElementById("github").src = "assets/github.svg";
 }
