@@ -17,6 +17,17 @@ $themeColors: (
 }
 
 @font-face{
+    font-family: Consolas;
+    src: url('../assets/Consola.TTF');
+}
+
+@mixin apiDataFont{
+    font-family: Consolas;
+    font-weight: 700;
+    font-size: 12px;
+}
+
+@font-face{
     font-family: Britanic;
     src: url('../assets/BRITANIC.TTF');
 }
