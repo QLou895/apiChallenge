@@ -1,0 +1,32 @@
+$themeColors: (
+    pink: #921B91,
+    blue: #232FB5,
+    purple: #5A26A5,
+
+    darkPink: #731A73,
+    darkBlue: #2A349F,
+    darkPurple: #552C91,
+);
+
+@import url('https://fonts.googleapis.com/css2?family=Aclonica&display=swap');
+
+@mixin titleFont($size){
+    font-family: 'Aclonica', sans-serif;
+    letter-spacing: 2px;
+    font-size: $size;
+}
+
+@mixin linkGrid{
+    display: inline-table;
+    height: 100%;    
+    width: 100%;
+    border:0; 
+    text-decoration:none; 
+    outline:none;
+}
+
+@mixin linkGridImage($image, $size){
+    background-color: black; //fallback color
+    background: url($image) center center no-repeat;
+    background-size: $size;
+}

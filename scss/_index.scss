@@ -1,5 +1,9 @@
+@import '_vars.scss';
+@use "sass:map";
+
 .grid-container {
     display: grid;
+    overflow: hidden;
     grid-template-columns: 0.6fr 1.05fr 1.05fr 1.05fr 1.05fr 1.05fr 1.05fr;
     grid-template-rows: 1fr 1fr 1fr;
     gap: 0px 0px;
@@ -7,45 +11,110 @@
     "myheader random random search search topPicks topPicks"
     "myheader random random search search topPicks topPicks"
     "myheader random random search search topPicks topPicks";
+    background-color: black; //fallback color
     .myheader { 
         grid-area: myheader; 
         background-color: #000;
         height: 100vh;
         width: 100%;
-        display: grid;
+        margin:0 ;
+        padding: 0;
+        min-width: 0px;
+        display: flex;
         place-items: center;
-        h1{
-            color: #fff;
-            transform: rotate(-90deg);
+        flex-direction: column;
+        justify-content: center;
+        #homeTitle{
+            @include titleFont(4.7em);
+            letter-spacing: 2px;
+            user-select: none;
+            margin: 0;
+            padding: 0;
+            transform: rotate(90deg);
+        }
+        .homeLink{
+            @include linkGrid;
         }
     }
 
     .random { 
         grid-area: random; 
-        background-color: #921B91;
         height: 100vh;
         width: 100%;
+        background-color: map-get($themeColors, pink); //fallback color;
+
+        overflow: hidden;
+        transform: scale(1);
+        transition: 0.3s ease-in-out;
+        
+        @include linkGridImage("../assets/spiderman.jpg", cover);
+        box-shadow: inset 0 0 0 100vw rgba(map-get($themeColors, pink), 0.9);
+        &:hover{
+            box-shadow: inset 0 0 0 100vw rgba(map-get($themeColors, pink), 0.97);
+            overflow:hidden;
+            transform: scale(1.02);
+            .homeLink{
+                transition: 0.3s ease-in-out;
+                transform: scale(1.05);
+            }
+        }
+        .homeLink{
+            @include linkGridImage("../assets/random.svg", 40%);
+            @include linkGrid;
+        }
     }
 
     .search { 
         grid-area: search;
-        background-color: #232FB5;
         height: 100vh;
         width: 100%;
+        background-color: map-get($themeColors, blue); //fallback color;
+
+        overflow: hidden;
+        transform: scale(1);
+        transition: 0.3s ease-in-out;
+
+        @include linkGridImage("../assets/puzzle.jpg", cover);
+        box-shadow: inset 0 0 0 100vw rgba(map-get($themeColors, blue), 0.9);
+        &:hover{
+            box-shadow: inset 0 0 0 100vw rgba(map-get($themeColors, blue), 0.97);
+            overflow:hidden;
+            transform: scale(1.02);
+            .homeLink{
+                transition: 0.3s ease-in-out;
+                transform: scale(1.05);
+            }
+        }
+        .homeLink{
+            @include linkGridImage("../assets/search.svg", 40%);
+            @include linkGrid;
+        }
     }
 
     .topPicks { 
         grid-area: topPicks; 
-        background-color: #5A26A5;
         height: 100vh;
         width: 100%;
-    }
-}
+        background-color: map-get($themeColors, purple); //fallback color;
 
-footer{
-    background-color: #000;
-    width: 100%;
-    padding: 3em;
-    color: #fff;
-    text-align: center;
+        overflow: hidden;
+        transform: scale(1);
+        transition: 0.3s ease-in-out;
+
+        @include linkGridImage("../assets/covidmask.jpg", cover);
+        box-shadow: inset 0 0 0 100vw rgba(map-get($themeColors, purple), 0.9);
+        &:hover{
+            box-shadow: inset 0 0 0 100vw rgba(map-get($themeColors, purple), 0.97);
+            overflow:hidden;
+            transform: scale(1.02);
+            .homeLink{
+                transition: 0.3s ease-in-out;
+                transform: scale(1.05);
+            }
+        }
+        .homeLink{
+            @include linkGridImage("../assets/toppicks.svg", 40%);
+            @include linkGrid;
+        }
+    }
 }
