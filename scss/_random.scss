@@ -6,7 +6,7 @@
     background-color: map-get($themeColors, purple);
 
     .pageMargin {
-        padding-top: 12em;
+        @include pageMargin;
     }
 
     h1 {
