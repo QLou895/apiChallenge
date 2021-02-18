@@ -77,7 +77,24 @@ nav li a {
 
 nav li a:hover {
   background-color: #121212;
+  animation:  shake 0.8s  ; 
 }
+
+@keyframes shake{ 
+  0%{ 
+    transform: translateX(0) 
+  } 
+  25%{ 
+    transform: translateX(5px); 
+  } 
+    
+  50%{ 
+    transform: translateX(-5px); 
+  } 
+  100%{ 
+    transform: translateX(0px); 
+  } 
+} 
 
 nav .logo {
   display: none;
