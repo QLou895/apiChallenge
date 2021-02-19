@@ -7,12 +7,6 @@
     <link rel="stylesheet" href="scss/main.css">
     <script src="js/icon.js"></script>
     <script src="js/topPicks.js"></script>
-    <script>
-        // // $(document).ready(function(){
-        // //     generatePick('activity3', 5);
-        // // })
-        // generatePick(5);
-    </script>
     </head>
     <body id="topPicks" >
        <nav>
@@ -43,7 +37,7 @@
                 </div>
                 <div class="act">
                     <section class="num">3</section>
-                    <section id="activity3">Hello</section>
+                    <section id="activity3"></section>
                 </div>
                 <div class="act">
                     <section class="num">2</section>
@@ -67,6 +61,11 @@
                 </div>
               </div>
         </footer>
-
+        <script>
+            for(i = 5; i>=0; i--){
+                generatePick("activity"+i.toString(), i);
+            }
+        </script>
     </body>
+
 </html>
