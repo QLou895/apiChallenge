@@ -1,56 +1,49 @@
-@import '_vars.scss';
+@import "_vars.scss";
 @use "sass:map";
 
 #topPicks {
-
-    background-color: map-get($themeColors, purple);
-    .pageMargin {
-        @include pageMargin;
-        h1{
-            @include h1Font(5em);
-            text-align:center;
-        }
+  background-color: map-get($themeColors, purple);
+  .pageMargin {
+    @include pageMargin;
+    h1 {
+      @include h1Font(5em);
+      text-align: center;
     }
+  }
 
-    #selectedActivities{
-        display: flex;
-        flex-direction: column;
-        
-        .act{
-            display: flex;
-            flex-direction: row;
-            align-content: center;
-            margin: 2% 0;
-            .num {
-                @include h1Font(9em);
-                text-align: right;
-                margin-left: 1%;
-                width: 30%;
-            }
-            #activity1, #activity2, #activity3, #activity4, #activity5{
+  #selectedActivities {
+    display: flex;
+    flex-direction: column;
 
-                font-size: 2.1em;
-                border-radius: 10px;
-                text-align: center;
-                width: 70%;
-                margin-left: 5%;
-                margin-right: 19%;
-                padding: 2% 5%;
-                background-color: map-get($themeColors, darkPurple);
-                text-align: left;
-                strong{
-                    @include apiDataFont(.9em);
-                }
-            }
-
-            
+    .act {
+      display: flex;
+      flex-direction: row;
+      align-content: center;
+      margin: 2% 0;
+      .num {
+        @include h1Font(9em);
+        text-align: right;
+        margin-left: 1%;
+        width: 30%;
+      }
+      #activity1,
+      #activity2,
+      #activity3,
+      #activity4,
+      #activity5 {
+        font-size: 2.1em;
+        border-radius: 10px;
+        text-align: center;
+        width: 70%;
+        margin-left: 5%;
+        margin-right: 19%;
+        padding: 2% 5%;
+        background-color: map-get($themeColors, darkPurple);
+        text-align: left;
+        strong {
+          @include apiDataFont(0.9em);
         }
-
+      }
     }
-
-    
+  }
 }
-
-
-
-
