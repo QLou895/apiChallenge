@@ -29,7 +29,7 @@
         text-align: center;
         margin-left: 20%;
         margin-right: 20%;
-        padding: 1% 5%;
+        padding: 2% 5%;
         background-color: map-get($themeColors, darkPink);
       }
     
@@ -47,6 +47,8 @@
         padding-right:16px;
         border: 1px solid #4e4e4e;
         transition-duration: 0.4s;
+        outline: none;
+        cursor: pointer;
       }
 
       #rand_btn:hover {
