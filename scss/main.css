@@ -2,6 +2,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Aclonica&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Aclonica&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Aclonica&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Aclonica&display=swap");
 @font-face {
   font-family: Consolas;
   src: url("../assets/Consola.TTF");
@@ -51,9 +52,9 @@
 }
 
 .grid-container .myheader #homeTitle {
-  font-family: 'Aclonica', sans-serif;
+  font-family: Britanic;
   letter-spacing: 2px;
-  font-size: 4.7em;
+  font-size: 5.5em;
   letter-spacing: 2px;
   -webkit-user-select: none;
      -moz-user-select: none;
@@ -178,7 +179,7 @@
   grid-area: topPicks;
   height: 100vh;
   width: 100%;
-  background-color: #5A26A5;
+  background-color: #6133a6;
   overflow: hidden;
   -webkit-transform: scale(1);
           transform: scale(1);
@@ -187,13 +188,13 @@
   background-color: black;
   background: url("../assets/covidmask.jpg") center center no-repeat;
   background-size: cover;
-  -webkit-box-shadow: inset 0 0 0 100vw rgba(90, 38, 165, 0.9);
-          box-shadow: inset 0 0 0 100vw rgba(90, 38, 165, 0.9);
+  -webkit-box-shadow: inset 0 0 0 100vw rgba(97, 51, 166, 0.9);
+          box-shadow: inset 0 0 0 100vw rgba(97, 51, 166, 0.9);
 }
 
 .grid-container .topPicks:hover {
-  -webkit-box-shadow: inset 0 0 0 100vw rgba(90, 38, 165, 0.97);
-          box-shadow: inset 0 0 0 100vw rgba(90, 38, 165, 0.97);
+  -webkit-box-shadow: inset 0 0 0 100vw rgba(97, 51, 166, 0.97);
+          box-shadow: inset 0 0 0 100vw rgba(97, 51, 166, 0.97);
   overflow: hidden;
   -webkit-transform: scale(1.02);
           transform: scale(1.02);
@@ -252,7 +253,7 @@ body {
 
 @use "sass:map";
 #random {
-  background-color: #5A26A5;
+  background-color: #921B91;
 }
 
 #random .pageMargin {
@@ -263,10 +264,147 @@ body {
   letter-spacing: 2px;
   font-size: 4em;
   font-family: Britanic;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 #random .mainBodySizing {
   height: 100vh;
+}
+
+#random #stuff {
+  font-size: 19px;
+  border-radius: 7px;
+  text-align: center;
+  margin-left: 20%;
+  margin-right: 20%;
+  padding: 2% 5%;
+  letter-spacing: 1px;
+  background-color: #731A73;
+}
+
+#random #stuff strong {
+  font-family: Consolas;
+  font-weight: 700;
+  font-size: 16px;
+  letter-spacing: 1px;
+}
+
+#random #rand_btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-radius: 30px;
+  background-color: #000000;
+  color: #d6d6d6;
+  font-size: 1.5em;
+  padding-top: .7%;
+  padding-bottom: .7%;
+  padding-left: 1%;
+  padding-right: 1%;
+  border: 1px solid #4e4e4e;
+  -webkit-transition-duration: 0.4s;
+          transition-duration: 0.4s;
+  outline: none;
+  cursor: pointer;
+}
+
+#random #rand_btn:hover {
+  background-color: white;
+  color: black;
+}
+
+#random #leftAlign {
+  text-align: left;
+}
+
+@font-face {
+  font-family: Consolas;
+  src: url("../assets/Consola.TTF");
+}
+
+@font-face {
+  font-family: Britanic;
+  src: url("../assets/BRITANIC.TTF");
+}
+
+@use "sass:map";
+#topPicks {
+  background-color: #6133a6;
+}
+
+#topPicks .pageMargin {
+  padding-top: 12em;
+}
+
+#topPicks .pageMargin h1 {
+  letter-spacing: 2px;
+  font-size: 4em;
+  font-family: Britanic;
+  text-align: center;
+}
+
+#topPicks #selectedActivities {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+#topPicks #selectedActivities .act {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  margin: 2% 0;
+}
+
+#topPicks #selectedActivities .act .num {
+  letter-spacing: 2px;
+  font-size: 5em;
+  font-family: Britanic;
+  text-align: right;
+  width: 30%;
+}
+
+#topPicks #selectedActivities .act #activity1, #topPicks #selectedActivities .act #activity2, #topPicks #selectedActivities .act #activity3, #topPicks #selectedActivities .act #activity4, #topPicks #selectedActivities .act #activity5 {
+  font-size: 19px;
+  border-radius: 7px;
+  text-align: center;
+  width: 70%;
+  margin-left: 5%;
+  margin-right: 20%;
+  padding: 2% 5%;
+  background-color: #552c91;
+  text-align: left;
+}
+
+#topPicks #selectedActivities .act #activity1 strong, #topPicks #selectedActivities .act #activity2 strong, #topPicks #selectedActivities .act #activity3 strong, #topPicks #selectedActivities .act #activity4 strong, #topPicks #selectedActivities .act #activity5 strong {
+  font-family: Consolas;
+  font-weight: 700;
+  font-size: 16px;
+  letter-spacing: 1px;
 }
 
 @font-face {

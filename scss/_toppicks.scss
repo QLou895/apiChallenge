@@ -1,0 +1,58 @@
+@import '_vars.scss';
+@use "sass:map";
+
+#topPicks {
+
+    background-color: map-get($themeColors, purple);
+    .pageMargin {
+        @include pageMargin;
+        h1{
+            @include h1Font(4em);
+            text-align:center;
+        }
+    }
+
+    #selectedActivities{
+        display: flex;
+        flex-direction: column;
+        
+        .act{
+            display: flex;
+            flex-direction: row;
+            align-content: center;
+            margin: 2% 0;
+            .num {
+                @include h1Font(5em);
+                text-align: right;
+                width: 30%;
+             
+
+            }
+            #activity1, #activity2, #activity3, #activity4, #activity5{
+
+                strong{
+                    @include apiDataFont;
+                }
+                
+                font-size: 19px;
+                border-radius: 7px;
+                text-align: center;
+                width: 70%;
+                margin-left: 5%;
+                margin-right: 20%;
+                padding: 2% 5%;
+                background-color: map-get($themeColors, darkPurple);
+                text-align: left;
+                
+            }
+            
+        }
+
+    }
+
+    
+}
+
+
+
+

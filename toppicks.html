@@ -6,8 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="scss/main.css">
     <script src="js/icon.js"></script>
+    <script src="js/topPicks.js"></script>
     </head>
-    <body>
+    <body id="topPicks" >
        <nav>
             <a href="/" class="logo">BORED?</a>
             <input class="menu-btn" type="checkbox" id="menu-btn" />
@@ -19,30 +20,32 @@
                 <li><a href="toppicks.html" class="active">Top Picks</a></li>
             </ul>
         </nav>
-        <header>
+        <header class="pageMargin">
             <h1>Top Picks</h1>
         </header>
         <main>
-            <div id="selectedAtivities">
-                <div id="act1">
-                    <section class="num">1</section>
-                    <section class="activity"></section>
+            <div id="selectedActivities">
+                <div class="act">
+                    <section class="num">5</section>
+                    
+                    
+                    <section id="activity1"></section>
                 </div>
-                <div id="act2">
-                    <section class="num">1</section>
-                    <section class="activity"></section>
+                <div class="act">
+                    <section class="num">4</section>
+                    <section id="activity2"></section>
                 </div>
-                <div id="act3">
-                    <section class="num">1</section>
-                    <section class="activity"></section>
+                <div class="act">
+                    <section class="num">3</section>
+                    <section id="activity3"></section>
                 </div>
-                <div id="act4">
-                    <section class="num">1</section>
-                    <section class="activity"></section>
+                <div class="act">
+                    <section class="num">2</section>
+                    <section id="activity4"></section>
                 </div>
-                <div id="act5">
+                <div class="act">
                     <section class="num">1</section>
-                    <section class="activity"></section>
+                    <section id="activity5"></section>
                 </div>
             </div>
         </main>
@@ -51,14 +54,18 @@
             <div class="footerContainer">
                 <div class="footerContent">
                   <p class="footerText">Group-D &copy; 2021</p>
-                  <p class="footerText">Shelly Penichet | Luis Quinones | Remy Pearson | Grace Hechavarria</p>
+                  <p class="footerText">Shelly Penichet | Lou Q | Remy's Name | Grace Hechavarria</p>
                   <div id="footerSocial"> 
-                      <a href="https://github.com/QLou895/apiChallenge" target="_blank"><img src="assets/github.svg" alt="github logo" id="github" width="30" height="30" onmouseover="githubmouseOver();" onmouseout="githubmouseOut();"></a>
+                    <a href="https://github.com/QLou895/apiChallenge" target="_blank"><img src="assets/github.svg" alt="github logo" id="github" width="30" height="30" onmouseover="githubmouseOver();" onmouseout="githubmouseOut();"></a>
                   </div>
                 </div>
               </div>
         </footer>
-
-        <script src="js/scripts.js"></script>
+        <script>
+            for(i = 5; i>=0; i--){
+                generatePick("activity"+i.toString(), i);
+            }
+        </script>
     </body>
+
 </html>

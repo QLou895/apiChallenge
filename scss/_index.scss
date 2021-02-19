@@ -49,7 +49,7 @@
         flex-direction: column;
         justify-content: center;
         #homeTitle{
-            @include titleFont(4.7em);
+            @include titleFont(5.5em);
             letter-spacing: 2px;
             user-select: none;
             margin: 0;
