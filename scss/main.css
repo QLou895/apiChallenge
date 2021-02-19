@@ -292,6 +292,13 @@
   padding-left: 16px;
   padding-right: 16px;
   border: 1px solid #4e4e4e;
+  -webkit-transition-duration: 0.4s;
+          transition-duration: 0.4s;
+}
+
+#random #rand_btn:hover {
+  background-color: white;
+  color: black;
 }
 
 #random #leftAlign {

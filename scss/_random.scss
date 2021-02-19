@@ -46,6 +46,12 @@
         padding-left:16px;
         padding-right:16px;
         border: 1px solid #4e4e4e;
+        transition-duration: 0.4s;
+      }
+
+      #rand_btn:hover {
+          background-color: white;
+          color: black;
       }
 
       #leftAlign {
