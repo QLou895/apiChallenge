@@ -179,7 +179,7 @@
   grid-area: topPicks;
   height: 100vh;
   width: 100%;
-  background-color: #5A26A5;
+  background-color: #6133a6;
   overflow: hidden;
   -webkit-transform: scale(1);
           transform: scale(1);
@@ -188,13 +188,13 @@
   background-color: black;
   background: url("../assets/covidmask.jpg") center center no-repeat;
   background-size: cover;
-  -webkit-box-shadow: inset 0 0 0 100vw rgba(90, 38, 165, 0.9);
-          box-shadow: inset 0 0 0 100vw rgba(90, 38, 165, 0.9);
+  -webkit-box-shadow: inset 0 0 0 100vw rgba(97, 51, 166, 0.9);
+          box-shadow: inset 0 0 0 100vw rgba(97, 51, 166, 0.9);
 }
 
 .grid-container .topPicks:hover {
-  -webkit-box-shadow: inset 0 0 0 100vw rgba(90, 38, 165, 0.97);
-          box-shadow: inset 0 0 0 100vw rgba(90, 38, 165, 0.97);
+  -webkit-box-shadow: inset 0 0 0 100vw rgba(97, 51, 166, 0.97);
+          box-shadow: inset 0 0 0 100vw rgba(97, 51, 166, 0.97);
   overflow: hidden;
   -webkit-transform: scale(1.02);
           transform: scale(1.02);
@@ -320,7 +320,7 @@
 
 @use "sass:map";
 #topPicks {
-  background-color: #5A26A5;
+  background-color: #6133a6;
 }
 
 #topPicks .pageMargin {
@@ -334,11 +334,54 @@
   text-align: center;
 }
 
-#topPicks .num {
+#topPicks #selectedActivities {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+#topPicks #selectedActivities .act {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  margin: 2% 0;
+}
+
+#topPicks #selectedActivities .act .num {
   letter-spacing: 2px;
   font-size: 5em;
   font-family: Britanic;
+  text-align: right;
+  width: 30%;
+}
+
+#topPicks #selectedActivities .act #activity1, #topPicks #selectedActivities .act #activity2, #topPicks #selectedActivities .act #activity3, #topPicks #selectedActivities .act #activity4, #topPicks #selectedActivities .act #activity5 {
+  font-size: 19px;
+  border-radius: 7px;
   text-align: center;
+  width: 70%;
+  margin-left: 5%;
+  margin-right: 20%;
+  padding: 2% 5%;
+  background-color: #552c91;
+  text-align: left;
+}
+
+#topPicks #selectedActivities .act #activity1 strong, #topPicks #selectedActivities .act #activity2 strong, #topPicks #selectedActivities .act #activity3 strong, #topPicks #selectedActivities .act #activity4 strong, #topPicks #selectedActivities .act #activity5 strong {
+  font-family: Consolas;
+  font-weight: 700;
+  font-size: 16px;
+  letter-spacing: 1px;
 }
 
 @font-face {

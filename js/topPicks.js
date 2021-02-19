@@ -15,6 +15,6 @@ async function generatePick(mydiv, num){
 
     
     const typeUpper = data.type[0].toUpperCase() + data.type.substring(1);
-    div.innerHTML = "Activity: " + data.activity + "<br>Accessibility: " + data.accessibility + "<br>Type: " + typeUpper + "<br>Participants: " + data.participants + "<br>Price: " + data.price;
+    div.innerHTML = "<strong>Activity: </strong>" + data.activity + "<br><strong>Accessibility: </strong>" + data.accessibility + "<br><strong>Type: </strong>" + typeUpper + "<br><strong>Participants: </strong>" + data.participants + "<br><strong>Price: </strong>" + data.price;
 
 }
