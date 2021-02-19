@@ -3,33 +3,33 @@
   padding: 0;
 }
 
-html{
+html {
   scroll-behavior: smooth;
 }
 
-body{
-  font-family: 'open sans', sans-serif;
+body {
+  font-family: "open sans", sans-serif;
   height: 100%;
   width: 100%;
   margin: 0;
   color: #fff;
 }
 
-header{
+header {
   width: 100%;
   height: auto;
 }
 
-main{
+main {
   width: 100%;
   height: auto;
 }
 
-footer{
-    background-color: #000;
-    width: 100%;
-    padding: 3em;
-    text-align: center;
+footer {
+  background-color: #000;
+  width: 100%;
+  padding: 3em;
+  text-align: center;
 }
 
-@import '_index.scss', '_random.scss', '_search.scss', '_toppicks.scss';
+@import "_index.scss", "_random.scss", "_search.scss", "_toppicks.scss";
