@@ -54,6 +54,8 @@ function relabelData(dataName, dataValue){
 async function getData() {
   // variables to collect data
 
+    doc_div.innerHTML="<img src='https://media.giphy.com/media/itPPg72momesJtM1PZ/giphy.gif' style='text-align:center' width=300px height=300px>";
+
     var op1 = document.querySelector('#type option:checked').value;
     var op2 = document.querySelector('#minprice option:checked').value;
     var op3 = document.querySelector('#maxprice option:checked').value;
@@ -101,7 +103,7 @@ async function getData() {
 
     if (!data.error) {
         const typeUpper = data.type[0].toUpperCase() + data.type.substring(1);
-
+        
         doc_div.innerHTML = "<strong>Activity: </strong>" + data.activity + "<br><strong>Accessibility: </strong>" + relabelData(1, data.accessibility) + "<br><strong>Type: </strong>" + typeUpper + "<br><strong>Participants: </strong>" + data.participants + "<br><strong>Price: </strong>" + relabelData(0, data.price);
     }else{
         doc_div.innerHTML = "Error: " + data.error;
