@@ -1,168 +1,107 @@
-// this function will retrieve the data from the form -> uInput
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+    <title>Bored?</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="scss/main.css">
+    <script rel="text/javascript" src="js/icon.js"></script>
 
-var btn = document.getElementById("searchButton");
-var doc_div = document.querySelector("#display");
+</head>
 
-
-async function getData() {
-  // variables to collect data
-    var op1 = document.querySelector('#type option:checked').value;
-    var op2 = document.querySelector('#minprice option:checked').value;
-    var op3 = document.querySelector('#maxprice option:checked').value;
-    var op4 = document.querySelector('#part option:checked').value;
-    var op5 = document.querySelector('#access option:checked').value;
-
+<body id="body">
+    <nav>
+        <a href="/" class="logo">BORED?</a>
+        <input class="menu-btn" type="checkbox" id="menu-btn" />
+        <label class="menu-icon" for="menu-btn"><span class="nav-icon"></span></label>
+        <ul class="menu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="random.html">Random</a></li>
+            <li><a href="search.html" class="active">Search</a></li>
+            <li><a href="toppicks.html">Top Picks</a></li>
+        </ul>
+    </nav>
     
-    // if (op1 != null) {
-    //     //do for all outs
-    //     var queryOut1 = "&type=" + op1;
-    // }
-    // else {
-    //     queryOut1 = "";
-    // }
-    
-    var input;
-    // var data = await input.json(); 
-    // console.log(data);
-    // doc_div.innerHTML =  data.type;
-    
+    <header class="pageMargin">
+        <h1 id="header1">Search Activity</h1>
+    </header>
 
+    <main class="mainBodySizing">
+        <div action="" name="uInput" id="uInput">
+            <!-- this dropdown list allows the user to select an activity  -->
+            <select name="type" id="type">
+                <option hidden value="null">type of activity</option>
+                <option value="education">Education</option>
+                <option value="recreational">Recreational</option>
+                <option value="social">Social</option>
+                <option value="diy">D.I.Y</option>
+                <option value="charity">Charity</option>
+                <option value="relaxation">Relaxation</option>
+                <option value="music">Music</option>
+                <option value="busywork">Busywork</option>
+            </select>
 
-    if (op2 != null && op3 == null) {
-    input = await fetch('https://www.boredapi.com/api/activity?accessibility=' + op5 + '&type=' + op1 + '&participants=' + op4 + '&price=' + op2);
-    var data = await input.json(); 
-    console.log(data);
-    doc_div.innerHTML  = "a "+ data.acessibility + " " + data.type + " " + data.participants + "" + data.price;
+            <!-- the least a user wants to spend -->
+            <select name="minprice" id="minprice">
+                <option hidden value="null">Minimum Price</option>
+                <option value="0.0">Free</option>
+                <option value="0.2">$15-25</option>
+                <option value="0.3">$25-35</option>
+            </select>
 
-    }
-    else if(op3 != null && op2 == null){
-        input = await fetch(`http://www.boredapi.com/api/activity?accessibility=${op5}&type=${op1}&paticipants=${op4}&price=${op3}`);
-        var data = await input.json(); 
-        console.log(data);
-        doc_div.innerHTML = "b "+ data.acessibility + " " + data.type + " " + data.participants + "" + data.price;
+            <!-- the most a user wants to spend -->
+            <select name="maxprice" id="maxprice">
+                <option hidden value="null">Maximum Price</option>
+                <option value="0.5">$35-45</option>
+                <option value="0.75">$55-65</option>
+                <option value="1.0">$65+</option>
+            </select>
 
-    } 
-    else {
-        input = await fetch(`https://www.boredapi.com/api/activity?accessibility=${op5}&type=${op1}&paticipants=${op4}&minprice=${op2}&maxprice=${op3}`)
-        var data = await input.json(); 
-        console.log(data);
-        doc_div.innerHTML =  "access "+data.acessibility + " " + data.type + " " + data.participants + " " + data.price +" "+ "else";
-    }
-}
-btn.addEventListener('click', getData);
+            <!-- this is dropdown list will allow the user to select the quantity of their party -->
+            <select name="part" id="part">
+                <option hidden value="null">participants</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+            </select>
 
+            <!-- the possibility of an event -->
+            <select name="access" id="access">
+                <option hidden value="null">Accessibility</option>
+                <option value="0.25">Effortless</option>
+                <option value="0.5">Moderate</option>
+                <option value="1.0">Concentrated</option>
+            </select>
 
+            <button id="searchButton">Search</button>
+        </div>
 
-// http://www.boredapi.com/api/activity?accessibility=${access}&type=${type}&paticipants=var&price=var
+        <div id="display"></div>
+    </main>
 
+        <footer>
+            <div class="footerContainer">
+                <div class="footerContent">
+                    <p class="footerText">Group-D &copy; 2021</p>
+                    <p class="footerText">Shelly Penichet | Luis Quinones | Remy Pearson | Grace Hechavarria</p>
+                    <div id="footerSocial">
+                        <a href="https://github.com/QLou895/apiChallenge" target="_blank"><img src="assets/github.svg"
+                                alt="github logo" id="github" width="30" height="30" onmouseover="githubmouseOver();"
+                                onmouseout="githubmouseOut();"></a>
+                    </div>
+                </div>
+            </div>
+        </footer>
 
-// this is the link to query the api
-// http://www.boredapi.com/api/activity?accessibility=var&type=var&paticipants=var&minprice=var&maxprice=var
+    <script defer type="text/javascript" src="js/search.js"></script>
+</body>
 
-
-
-
-
-
-
-
-// $(document).ready(function () {
-
-//     var inputPreview = $("#uInput"),
-//         input = $("option");
-
-//     TweenMax.set(input, {
-//         scale: 1.2,
-//         alpha: 0
-//     });
-// });
-// inputPreview.on("click", function(){
-
-// var that = $(this);
-
-// that.toggleClass("active");
-
-// if(that.hasClass("active")){
-    
-//     TweenMax.staggerTo(input, 1.25, {
-//     scale: 1,
-//     alpha: 1,
-//     ease: Elastic.easeOut
-//     }, .1);   
-// }
-// else {
-//     TweenMax.staggerTo(input, 1, {
-//     scale: 1.2,
-//     alpha: 0,
-//     ease: Elastic.easeOut
-//     }, .1);
-// }
-// });
-
-// input.on("click", function() {
-
-// var tlInput = new TimelineMax({
-//     onComplete: done
-// });
-
-// var that = $(this),
-//     siblings = that.siblings(".input"),
-//     data = that.data("val"),
-//     top = that.css("top");
-
-// siblings.removeClass("active");
-
-// tlInput.to(siblings, .25, {
-//     alpha: 0
-//     })
-//     .to(that, .25, {
-//     scale: 1.2
-//     })
-//     .to(that, .25, {
-//     top: 0,
-//     })
-//     .set(inputPreview, {
-//     display: "none"
-//     })
-//     .to(that, .25, {
-//     scale: 1,
-//     })
-//     .to(that, .5, {
-//     backgroundColor: "#1D77EF"
-//     })
-//     .set(inputPreview, {
-//     text: data,
-//     display: "block"
-//     })
-//     .to(that, .25, {
-//     alpha: 0
-//     })
-
-// function done() {
-//     inputPreview.removeClass("active");
-//     that.css("top", top).addClass("active");
-
-//     TweenMax.set(input, {
-//     scale: 1.2,
-//     alpha: 0,
-//     backgroundColor: "#fff"
-//     });
-// }
-
-// });
-
-// // copy
-// balapaCop("Select Input Interaction", "rgba(255,255,255,.5)");
-// });
-
-
-/********************************* note to self *****************************
-    this will be a var --> var something = activity=value 
-    
-    a function for grabbing the data from search.html 
-    validate price
-    then fetch results
-    Do I want to use JQuery?
-    Turn the form into a obj?
-*/
+</html>
