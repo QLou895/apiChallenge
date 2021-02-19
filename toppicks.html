@@ -7,6 +7,12 @@
     <link rel="stylesheet" href="scss/main.css">
     <script src="js/icon.js"></script>
     <script src="js/topPicks.js"></script>
+    <script>
+        // $(document).ready(function(){
+        //     generatePick('activity3', 5);
+        // })
+        generatePick('activity3', 5);
+    </script>
     </head>
     <body id="topPicks" >
        <nav>
@@ -25,25 +31,25 @@
         </header>
         <main>
             <div id="selectedAtivities">
-                <div id="act1">
+                <div class="act">
                     <section class="num">5</section>
                     
                     
                     <section id="activity1"></section>
                 </div>
-                <div id="act2">
+                <div class="act">
                     <section class="num">4</section>
                     <section id="activity2"></section>
                 </div>
-                <div id="act3">
+                <div class="act">
                     <section class="num">3</section>
                     <section id="activity3"></section>
                 </div>
-                <div id="act4">
+                <div class="act">
                     <section class="num">2</section>
                     <section id="activity4"></section>
                 </div>
-                <div id="act5">
+                <div class="act">
                     <section class="num">1</section>
                     <section id="activity5"></section>
                 </div>
@@ -56,12 +62,11 @@
                   <p class="footerText">Group-D &copy; 2021</p>
                   <p class="footerText">Shelly Penichet | Lou Q | Remy's Name | Grace Hechavarria</p>
                   <div id="footerSocial"> 
-                      <a href="https://github.com/QLou895/apiChallenge" target="_blank">Github</a>
+                    <a href="https://github.com/QLou895/apiChallenge" target="_blank"><img src="assets/github.svg" alt="github logo" id="github" width="30" height="30" onmouseover="githubmouseOver();" onmouseout="githubmouseOut();"></a>
                   </div>
                 </div>
               </div>
         </footer>
 
-        <script src="js/scripts.js"></script>
     </body>
 </html>
