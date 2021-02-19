@@ -37,10 +37,11 @@ main{
 footer{
     background-color: #000;
     width: 100%;
-    padding: 3em;
+    margin: 0;
+    padding: 3em 0;
     text-align: center;
     .footerText{
-      font-size: 1.3em;
+      font-size: 1.5em;
     }
     img{
       padding-top: 5px;

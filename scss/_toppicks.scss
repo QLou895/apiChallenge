@@ -7,7 +7,7 @@
     .pageMargin {
         @include pageMargin;
         h1{
-            @include h1Font(4em);
+            @include h1Font(5em);
             text-align:center;
         }
     }
@@ -22,20 +22,15 @@
             align-content: center;
             margin: 2% 0;
             .num {
-                @include h1Font(5em);
+                @include h1Font(9em);
                 text-align: right;
                 width: 30%;
-             
-
             }
             #activity1, #activity2, #activity3, #activity4, #activity5{
 
-                strong{
-                    @include apiDataFont;
-                }
-                
-                font-size: 19px;
-                border-radius: 7px;
+
+                font-size: 2.1em;
+                border-radius: 10px;
                 text-align: center;
                 width: 70%;
                 margin-left: 5%;
@@ -43,8 +38,11 @@
                 padding: 2% 5%;
                 background-color: map-get($themeColors, darkPurple);
                 text-align: left;
-                
+                strong{
+                    @include apiDataFont(.9em);
+                }
             }
+
             
         }
 
