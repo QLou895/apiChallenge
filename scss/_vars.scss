@@ -24,7 +24,8 @@ $themeColors: (
 @mixin apiDataFont{
     font-family: Consolas;
     font-weight: 700;
-    font-size: 12px;
+    font-size: 16px;
+    letter-spacing: 1px;
 }
 
 @font-face{
