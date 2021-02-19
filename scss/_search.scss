@@ -1,83 +1,82 @@
+@import "_vars.scss";
+@use "sass:map";
+
 //The  stlyles for the search page
-body {
-  background-color: map-get($themeColors, darkblue);
-}
-//styles for the main
-#main {
-  height: 100vh;
-}
+#body {
+  background-color: map-get($themeColors, blue);
 
-#uInput {
-  display: flex;
-  flex-flow: row nowrap;
-  justify-content: center;
-  width: 45%;
-  margin: 80px;
-}
-
-/***************************************** the styles for the drop down ***************/
-/*
-.select-ctr {
-  @include position(absolute, 50% x x 50%);
-  @include transform(translate(-50%, -50%));
-  width: 350px;
-  height: 370px;
-  font-family:"Roboto";
-  
-  > div {
-    padding: 15px 20px;
-    position: absolute;
-    width: 100%;
-    font-size: 1.25rem;
-    cursor: pointer;
+  .pageMargin {
+    @include pageMargin;
   }
-  
-  $num: 5;
 
-  @while $num > 0 {
-      .input-#{$num} {
-          top: #{$num*60}px;
+  #header1 {
+    @include h1Font(5em);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  //styles for the main
+  .mainBodySizing {
+    height: 100vh;
+    margin-top: 2%;
+
+    #uInput {
+      transform: translate(-50%, -50);
+      display: flex;
+      margin-top: 2.5%;
+      align-items: center;
+      font-family: "Roboto";
+      justify-content: center;
+      align-content: center;
+      width: 30em;
+
+      select {
+        margin-left: 5px;
+        margin-right: 5px;
+        width: 150px;
+        border: 2px solid white;
+        background-color: map-get($themeColors, blue);
+        color: white;
+        font-size: 1.1em;
+        option {
+          background-color: white;
+          color: black;
+          width: 150px;
+        }
       }
-      $num: $num - 1;
-  }
-  
-  > div.input {
-    background: #fff;
-    color: #777;
-    border-radius: 2px;
-    box-shadow: 0 2px 15px 3px rgba(0, 0, 0, 0.1) 
-  }
-  
-  > div.input.active {
-    color: #1D77EF;
-  }
-  
-  > div.input-preview {
-    color: rgba(255,255,255,.75);;
-    position: relative;
-    transition: .3s all ease;
-    
-    &.active {
-      color: rgba(255,255,255,1);
+      #searchButton {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 30px;
+        background-color: black;
+        color: #d6d6d6;
+        font-size: 1.1em;
+        padding-top: 7px;
+        padding-bottom: 7px;
+        padding-left: 17px;
+        padding-right: 17px;
+        border: 1px solid #4e4e4e;
+        transition-duration: 0.4s;
+        outline: none;
+        cursor: pointer;
+      }
     }
-    
-    &:before {
-      content:"";
-      @include position(absolute, 18px 20px 20px x);
-      width: 20px;
-      background: rgba(255,255,255,.75);
--webkit-clip-path: polygon(50% 73%, 0 0, 100% 0);
-clip-path: polygon(50% 73%, 0 0, 100% 0);
-      padding: 10px;
-      box-sizing: border-box;
-      transition: .3s all ease;
+
+    #display {
+      font-size: 2.1em;
+      border-radius: 10px;
+      text-align: left;
+      margin-top: 3.25%;
+      margin-left: 20%;
+      margin-right: 20%;
+      padding: 2% 5%;
+      letter-spacing: 1px;
+      background-color: map-get($themeColors, darkBlue);
+      strong {
+        @include apiDataFont(0.9em);
+      }
     }
-    
-    &.active:before {
-      background: rgba(255,255,255,1);
-      -webkit-clip-path: polygon(50% 0, 0 73%, 100% 73%);
-clip-path: polygon(50% 0, 0 73%, 100% 73%);
-    }
-  } 
+  }
 }
-*/

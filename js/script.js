@@ -1,14 +1,3 @@
-// this function will retrieve the data from the form -> uInput
-var input = document.querySelector("form").elements;
-// console.log(input);
-
-function getData(){
-
-  // select-option
-  input
-}
-
-
 var doc_div = document.querySelector("#stuff");
 var btn = document.querySelector("#rand_btn");
 
@@ -25,10 +14,6 @@ async function generateData(){
 }
 
 btn.addEventListener('click', generateData);
-<<<<<<< HEAD
->>>>>>> baf899b8fdca7c7adffed7c769d9137170901c28
-=======
-
 function relabelData(dataName, dataValue){
     //parameters
     // dataName = price, accessibility
@@ -73,4 +58,22 @@ function relabelData(dataName, dataValue){
     return label;
 
 }
->>>>>>> cae5ed8f00a9ee1ad1be5fc9513a22e6944ac122
+async function generatePick(mydiv, num){
+
+    var keys = [3621244, 8779876, 6613428, 5881647, 8092359];
+
+    var div = document.getElementById(mydiv);
+    num -= 1;
+    mykey = keys[num];
+
+    var response = await fetch("https://www.boredapi.com/api/activity?key=" + mykey);
+    var data = await response.json();
+    console.log(data);
+
+
+    
+    const typeUpper = data.type[0].toUpperCase() + data.type.substring(1);
+    div.innerHTML = "<strong>Activity: </strong>" + data.activity + "<br><strong>Accessibility: </strong>" + relabelData(1, data.accessibility) + "<br><strong>Type: </strong>" + typeUpper + "<br><strong>Participants: </strong>" + data.participants + "<br><strong>Price: </strong>" + relabelData(0, data.price);
+
+}
+

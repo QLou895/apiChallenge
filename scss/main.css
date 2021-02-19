@@ -3,6 +3,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Aclonica&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Aclonica&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Aclonica&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Aclonica&display=swap");
 @font-face {
   font-family: Consolas;
   src: url("../assets/Consola.TTF");
@@ -75,7 +76,7 @@
   outline: none;
 }
 
-.grid-container .random {
+.random {
   -ms-grid-row: 1;
   -ms-grid-row-span: 3;
   -ms-grid-column: 2;
@@ -84,9 +85,22 @@
   height: 100vh;
   width: 100%;
   background-color: #921B91;
+  background-color: black;
+  background: url("../assets/spiderman.jpg") center center no-repeat;
+  background-size: cover;
+  -webkit-box-shadow: inset 0 0 0 100vw rgba(146, 27, 145, 0.9);
+          box-shadow: inset 0 0 0 100vw rgba(146, 27, 145, 0.9);
+}
+
+.random:hover {
+  -webkit-box-shadow: inset 0 0 0 100vw rgba(146, 27, 145, 0.97);
+          box-shadow: inset 0 0 0 100vw rgba(146, 27, 145, 0.97);
   overflow: hidden;
-  -webkit-transform: scale(1);
-          transform: scale(1);
+  -webkit-transform: scale(1.02);
+          transform: scale(1.02);
+}
+
+.random:hover .homeLink {
   -webkit-transition: 0.3s ease-in-out;
   transition: 0.3s ease-in-out;
   background-color: black;
@@ -96,7 +110,7 @@
           box-shadow: inset 0 0 0 100vw rgba(146, 27, 145, 0.9);
 }
 
-.grid-container .random:hover {
+.random:hover .homeLink:hover {
   -webkit-box-shadow: inset 0 0 0 100vw rgba(146, 27, 145, 0.97);
           box-shadow: inset 0 0 0 100vw rgba(146, 27, 145, 0.97);
   overflow: hidden;
@@ -104,14 +118,14 @@
           transform: scale(1.02);
 }
 
-.grid-container .random:hover .homeLink {
+.random:hover .homeLink:hover .homeLink {
   -webkit-transition: 0.3s ease-in-out;
   transition: 0.3s ease-in-out;
   -webkit-transform: scale(1.05);
           transform: scale(1.05);
 }
 
-.grid-container .random .homeLink {
+.random:hover .homeLink .homeLink {
   background-color: black;
   background: url("../assets/random.svg") center center no-repeat;
   background-size: 40%;
@@ -123,7 +137,29 @@
   outline: none;
 }
 
-.grid-container .search {
+.random:hover .homeLink {
+  background-color: black;
+  background: url("../assets/spiderman.jpg") center center no-repeat;
+  background-size: 40%;
+  display: inline-table;
+  height: 100%;
+  width: 100%;
+  border: 0;
+  text-decoration: none;
+  outline: none;
+}
+
+.search {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 3;
+  -ms-grid-column: 4;
+  -ms-grid-column-span: 2;
+  grid-area: search;
+  height: 100vh;
+  width: 100%;
+}
+
+.search .search {
   -ms-grid-row: 1;
   -ms-grid-row-span: 3;
   -ms-grid-column: 4;
@@ -144,7 +180,7 @@
           box-shadow: inset 0 0 0 100vw rgba(35, 47, 181, 0.9);
 }
 
-.grid-container .search:hover {
+.search .search:hover {
   -webkit-box-shadow: inset 0 0 0 100vw rgba(35, 47, 181, 0.97);
           box-shadow: inset 0 0 0 100vw rgba(35, 47, 181, 0.97);
   overflow: hidden;
@@ -152,14 +188,46 @@
           transform: scale(1.02);
 }
 
-.grid-container .search:hover .homeLink {
+.search .search:hover .homeLink {
   -webkit-transition: 0.3s ease-in-out;
   transition: 0.3s ease-in-out;
   -webkit-transform: scale(1.05);
           transform: scale(1.05);
 }
 
-.grid-container .search .homeLink {
+.search .search .homeLink {
+  background-color: black;
+  background: url("../assets/puzzle.jpg") center center no-repeat;
+  background-size: 40%;
+  display: inline-table;
+  height: 100%;
+  width: 100%;
+  border: 0;
+  text-decoration: none;
+  outline: none;
+  background-color: black;
+  background: url("../assets/puzzle.jpg") center center no-repeat;
+  background-size: cover;
+  -webkit-box-shadow: inset 0 0 0 100vw rgba(35, 47, 181, 0.9);
+          box-shadow: inset 0 0 0 100vw rgba(35, 47, 181, 0.9);
+}
+
+.search .search .homeLink:hover {
+  -webkit-box-shadow: inset 0 0 0 100vw rgba(35, 47, 181, 0.97);
+          box-shadow: inset 0 0 0 100vw rgba(35, 47, 181, 0.97);
+  overflow: hidden;
+  -webkit-transform: scale(1.02);
+          transform: scale(1.02);
+}
+
+.search .search .homeLink:hover .homeLink {
+  -webkit-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+}
+
+.search .search .homeLink .homeLink {
   background-color: black;
   background: url("../assets/search.svg") center center no-repeat;
   background-size: 40%;
@@ -171,7 +239,17 @@
   outline: none;
 }
 
-.grid-container .topPicks {
+.search .topPicks {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 3;
+  -ms-grid-column: 6;
+  -ms-grid-column-span: 2;
+  grid-area: topPicks;
+  height: 100vh;
+  width: 100%;
+}
+
+.search .topPicks .topPicks {
   -ms-grid-row: 1;
   -ms-grid-row-span: 3;
   -ms-grid-column: 6;
@@ -192,7 +270,7 @@
           box-shadow: inset 0 0 0 100vw rgba(97, 51, 166, 0.9);
 }
 
-.grid-container .topPicks:hover {
+.search .topPicks .topPicks:hover {
   -webkit-box-shadow: inset 0 0 0 100vw rgba(97, 51, 166, 0.97);
           box-shadow: inset 0 0 0 100vw rgba(97, 51, 166, 0.97);
   overflow: hidden;
@@ -200,14 +278,14 @@
           transform: scale(1.02);
 }
 
-.grid-container .topPicks:hover .homeLink {
+.search .topPicks .topPicks:hover .homeLink {
   -webkit-transition: 0.3s ease-in-out;
   transition: 0.3s ease-in-out;
   -webkit-transform: scale(1.05);
           transform: scale(1.05);
 }
 
-.grid-container .topPicks .homeLink {
+.search .topPicks .topPicks .homeLink {
   background-color: black;
   background: url("../assets/toppicks.svg") center center no-repeat;
   background-size: 40%;
@@ -219,28 +297,6 @@
   outline: none;
 }
 
-<<<<<<< HEAD
-body {
-  background-color: #2A349F;
-}
-
-#main {
-  height: 100vh;
-}
-
-#menuList {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: row nowrap;
-          flex-flow: row nowrap;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  width: 45%;
-=======
 @font-face {
   font-family: Consolas;
   src: url("../assets/Consola.TTF");
@@ -344,6 +400,124 @@ body {
 }
 
 @use "sass:map";
+#body {
+  background-color: #232FB5;
+}
+
+#body .pageMargin {
+  padding-top: 12em;
+}
+
+#body #header1 {
+  letter-spacing: 2px;
+  font-size: 5em;
+  font-family: Britanic;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#body .mainBodySizing {
+  height: 100vh;
+  margin-top: 2%;
+}
+
+#body .mainBodySizing #uInput {
+  -webkit-transform: translate(-50%, -50);
+          transform: translate(-50%, -50);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 2.5%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-family: "Roboto";
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  width: 30em;
+}
+
+#body .mainBodySizing #uInput select {
+  margin-left: 5px;
+  margin-right: 5px;
+  width: 150px;
+  border: 2px solid white;
+  background-color: #232FB5;
+  color: white;
+  font-size: 1.1em;
+}
+
+#body .mainBodySizing #uInput select option {
+  background-color: white;
+  color: black;
+  width: 150px;
+}
+
+#body .mainBodySizing #uInput #searchButton {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-radius: 30px;
+  background-color: black;
+  color: #d6d6d6;
+  font-size: 1.1em;
+  padding-top: 7px;
+  padding-bottom: 7px;
+  padding-left: 17px;
+  padding-right: 17px;
+  border: 1px solid #4e4e4e;
+  -webkit-transition-duration: 0.4s;
+          transition-duration: 0.4s;
+  outline: none;
+  cursor: pointer;
+}
+
+#body .mainBodySizing #display {
+  font-size: 2.1em;
+  border-radius: 10px;
+  text-align: left;
+  margin-top: 3.25%;
+  margin-left: 20%;
+  margin-right: 20%;
+  padding: 2% 5%;
+  letter-spacing: 1px;
+  background-color: #2A349F;
+}
+
+#body .mainBodySizing #display strong {
+  font-family: Consolas;
+  font-weight: 700;
+  font-size: 0.9em;
+  letter-spacing: 1px;
+}
+
+@font-face {
+  font-family: Consolas;
+  src: url("../assets/Consola.TTF");
+}
+
+@font-face {
+  font-family: Britanic;
+  src: url("../assets/BRITANIC.TTF");
+}
+
+@use "sass:map";
 #topPicks {
   background-color: #6133a6;
 }
@@ -387,6 +561,7 @@ body {
   font-size: 9em;
   font-family: Britanic;
   text-align: right;
+  margin-left: 1%;
   width: 30%;
 }
 
@@ -396,7 +571,7 @@ body {
   text-align: center;
   width: 70%;
   margin-left: 5%;
-  margin-right: 20%;
+  margin-right: 19%;
   padding: 2% 5%;
   background-color: #552c91;
   text-align: left;
@@ -417,7 +592,6 @@ body {
 @font-face {
   font-family: Britanic;
   src: url("../assets/BRITANIC.TTF");
->>>>>>> baf899b8fdca7c7adffed7c769d9137170901c28
 }
 
 * {
@@ -435,11 +609,7 @@ html {
 }
 
 body {
-<<<<<<< HEAD
-  font-family: "open sans", sans-serif;
-=======
   font-family: Calibri;
->>>>>>> baf899b8fdca7c7adffed7c769d9137170901c28
   height: 100%;
   width: 100%;
   margin: 0;
@@ -455,6 +625,21 @@ header {
 main {
   width: 100%;
   height: auto;
+}
+
+main form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 45%;
+  margin: 80px;
 }
 
 footer {

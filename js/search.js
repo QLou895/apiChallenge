@@ -50,7 +50,7 @@ async function getData() {
         doc_div.innerHTML =  "access "+data.acessibility + " " + data.type + " " + data.participants + " " + data.price +" "+ "else";
     }
 }
-btn.addEventListener('click', getData());
+btn.addEventListener('click', getData);
 
 
 
