@@ -1,7 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Aclonica&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Aclonica&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Aclonica&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Aclonica&display=swap");
+
 @import url("https://fonts.googleapis.com/css2?family=Aclonica&display=swap");
 @font-face {
   font-family: Consolas;
@@ -23,7 +20,9 @@
   -ms-grid-rows: 1fr 1fr 1fr;
       grid-template-rows: 1fr 1fr 1fr;
   gap: 0px 0px;
-      grid-template-areas: "myheader random random search search topPicks topPicks" "myheader random random search search topPicks topPicks" "myheader random random search search topPicks topPicks";
+      grid-template-areas: "myheader random random search search topPicks topPicks"
+ "myheader random random search search topPicks topPicks"
+ "myheader random random search search topPicks topPicks";
   background-color: black;
 }
 
@@ -52,9 +51,9 @@
 }
 
 .grid-container .myheader #homeTitle {
-  font-family: 'Aclonica', sans-serif;
+  font-family: Britanic;
   letter-spacing: 2px;
-  font-size: 4.7em;
+  font-size: 5.5em;
   letter-spacing: 2px;
   -webkit-user-select: none;
      -moz-user-select: none;
