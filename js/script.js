@@ -5,7 +5,7 @@ var btn = document.querySelector("#rand_btn");
 //async means do your thing in the background so everything can continue to work
 async function generateData(){
 
-    doc_div.innerHTML="<img src='https://media.giphy.com/media/2y2Egeju1Fu7e/giphy.gif' style='text-align:center' width=300px height=300px>";
+    doc_div.innerHTML="<img src='https://media.giphy.com/media/2y2Egeju1Fu7e/giphy.gif' style='display:block;margin-left: auto; margin-right:auto;' width=300px height=300px>";
 
     //fetch data
     var response = await fetch("https://www.boredapi.com/api/activity");
@@ -68,7 +68,7 @@ async function generatePick(mydiv, num){
 
     var div = document.getElementById(mydiv);
 
-    div.innerHTML="<img src='https://media.giphy.com/media/2y2Egeju1Fu7e/giphy.gif' style='text-align:center' width=300px height=300px>";
+    div.innerHTML="<img src='https://media.giphy.com/media/2y2Egeju1Fu7e/giphy.gif' style='display:block;margin-left: auto; margin-right:auto;' width=300px height=300px>";
 
     num -= 1;
     mykey = keys[num];
