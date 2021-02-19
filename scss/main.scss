@@ -11,18 +11,13 @@ html {
   scroll-behavior: smooth;
 }
 
-<<<<<<< HEAD
-body {
-  font-family: "open sans", sans-serif;
-=======
-@font-face { 
- font-family: Calibri ; 
- src: url('../assets/Calibri.ttf'); 
-} 
+@font-face {
+  font-family: Calibri;
+  src: url("../assets/Calibri.ttf");
+}
 
-body{
-  font-family: Calibri;  
->>>>>>> baf899b8fdca7c7adffed7c769d9137170901c28
+body {
+  font-family: Calibri;
   height: 100%;
   width: 100%;
   margin: 0;
@@ -47,26 +42,18 @@ main {
   }
 }
 
-<<<<<<< HEAD
 footer {
   background-color: #000;
   width: 100%;
-  padding: 3em;
+  margin: 0;
+  padding: 3em 0;
   text-align: center;
-=======
-footer{
-    background-color: #000;
-    width: 100%;
-    margin: 0;
-    padding: 3em 0;
-    text-align: center;
-    .footerText{
-      font-size: 1.5em;
-    }
-    img{
-      padding-top: 5px;
-    }
->>>>>>> baf899b8fdca7c7adffed7c769d9137170901c28
+  .footerText {
+    font-size: 1.5em;
+  }
+  img {
+    padding-top: 5px;
+  }
 }
 
 /*NAV*/
@@ -99,24 +86,24 @@ nav li a {
 
 nav li a:hover {
   background-color: #121212;
-  animation:  shake 0.8s  ; 
+  animation: shake 0.8s;
 }
 
-@keyframes shake{ 
-  0%{ 
-    transform: translateX(0) 
-  } 
-  25%{ 
-    transform: translateX(5px); 
-  } 
-    
-  50%{ 
-    transform: translateX(-5px); 
-  } 
-  100%{ 
-    transform: translateX(0px); 
-  } 
-} 
+@keyframes shake {
+  0% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(5px);
+  }
+
+  50% {
+    transform: translateX(-5px);
+  }
+  100% {
+    transform: translateX(0px);
+  }
+}
 
 nav .logo {
   display: none;
@@ -131,7 +118,7 @@ nav .logo {
 }
 
 /* menu */
-nav .menu{
+nav .menu {
   clear: both;
   max-height: 0;
   transition: max-height 0.2s ease-out;
@@ -194,9 +181,5 @@ nav .menu-btn:checked ~ .menu-icon .nav-icon:before {
 
 nav .menu-btn:checked ~ .menu-icon .nav-icon:after {
   transform: rotate(45deg);
-<<<<<<< HEAD
   top: 0;
-=======
-  top:0;
->>>>>>> cae5ed8f00a9ee1ad1be5fc9513a22e6944ac122
 }
