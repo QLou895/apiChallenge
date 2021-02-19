@@ -107,7 +107,8 @@ async function getData() {
         doc_div.innerHTML = "Error: " + data.error;
     }
 }
-btn.addEventListener('click', getData());
+
+btn.addEventListener("click", getData);
 
 
 // http://www.boredapi.com/api/activity?accessibility=${access}&type=${type}&paticipants=var&price=var
