@@ -11,6 +11,7 @@
     "myheader random random search search topPicks topPicks"
     "myheader random random search search topPicks topPicks"
     "myheader random random search search topPicks topPicks";
+<<<<<<< HEAD
   background-color: black; //fallback color
   .myheader {
     grid-area: myheader;
@@ -33,9 +34,36 @@
     }
     .homeLink {
       @include linkGrid;
+=======
+    background-color: black; //fallback color
+    .myheader { 
+        grid-area: myheader; 
+        background-color: #000;
+        height: 100vh;
+        width: 100%;
+        margin:0 ;
+        padding: 0;
+        min-width: 0px;
+        display: flex;
+        place-items: center;
+        flex-direction: column;
+        justify-content: center;
+        #homeTitle{
+            @include titleFont(4.7em);
+            letter-spacing: 2px;
+            user-select: none;
+            margin: 0;
+            padding: 0;
+            transform: rotate(90deg);
+        }
+        .homeLink{
+            @include linkGrid;
+        }
+>>>>>>> baf899b8fdca7c7adffed7c769d9137170901c28
     }
   }
 
+<<<<<<< HEAD
   .random {
     grid-area: random;
     height: 100vh;
@@ -44,6 +72,13 @@
     overflow: hidden;
     transform: scale(1);
     transition: 0.3s ease-in-out;
+=======
+    .random { 
+        grid-area: random; 
+        height: 100vh;
+        width: 100%;
+        background-color: map-get($themeColors, pink); //fallback color;
+>>>>>>> baf899b8fdca7c7adffed7c769d9137170901c28
 
     @include linkGridImage("../assets/spiderman.jpg", cover);
     box-shadow: inset 0 0 0 100vw rgba(map-get($themeColors, pink), 0.9);
@@ -53,8 +88,27 @@
       transform: scale(1.02);
       .homeLink {
         transition: 0.3s ease-in-out;
+<<<<<<< HEAD
         transform: scale(1.05);
       }
+=======
+        
+        @include linkGridImage("../assets/spiderman.jpg", cover);
+        box-shadow: inset 0 0 0 100vw rgba(map-get($themeColors, pink), 0.9);
+        &:hover{
+            box-shadow: inset 0 0 0 100vw rgba(map-get($themeColors, pink), 0.97);
+            overflow:hidden;
+            transform: scale(1.02);
+            .homeLink{
+                transition: 0.3s ease-in-out;
+                transform: scale(1.05);
+            }
+        }
+        .homeLink{
+            @include linkGridImage("../assets/random.svg", 40%);
+            @include linkGrid;
+        }
+>>>>>>> baf899b8fdca7c7adffed7c769d9137170901c28
     }
     .homeLink {
       @include linkGridImage("../assets/spiderman.jpg", 40%);
@@ -62,15 +116,24 @@
     }
   }
 
+<<<<<<< HEAD
   .search {
     grid-area: search;
     height: 100vh;
     width: 100%;
+=======
+    .search { 
+        grid-area: search;
+        height: 100vh;
+        width: 100%;
+        background-color: map-get($themeColors, blue); //fallback color;
+>>>>>>> baf899b8fdca7c7adffed7c769d9137170901c28
 
     overflow: hidden;
     transform: scale(1);
     transition: 0.3s ease-in-out;
 
+<<<<<<< HEAD
     @include linkGridImage("../assets/puzzle.jpg", cover);
     box-shadow: inset 0 0 0 100vw rgba(map-get($themeColors, blue), 0.9);
     &:hover {
@@ -85,18 +148,44 @@
     .homeLink {
       @include linkGridImage("../assets/puzzle.jpg", 40%);
       @include linkGrid;
+=======
+        @include linkGridImage("../assets/puzzle.jpg", cover);
+        box-shadow: inset 0 0 0 100vw rgba(map-get($themeColors, blue), 0.9);
+        &:hover{
+            box-shadow: inset 0 0 0 100vw rgba(map-get($themeColors, blue), 0.97);
+            overflow:hidden;
+            transform: scale(1.02);
+            .homeLink{
+                transition: 0.3s ease-in-out;
+                transform: scale(1.05);
+            }
+        }
+        .homeLink{
+            @include linkGridImage("../assets/search.svg", 40%);
+            @include linkGrid;
+        }
+>>>>>>> baf899b8fdca7c7adffed7c769d9137170901c28
     }
   }
 
+<<<<<<< HEAD
   .topPicks {
     grid-area: topPicks;
     height: 100vh;
     width: 100%;
+=======
+    .topPicks { 
+        grid-area: topPicks; 
+        height: 100vh;
+        width: 100%;
+        background-color: map-get($themeColors, purple); //fallback color;
+>>>>>>> baf899b8fdca7c7adffed7c769d9137170901c28
 
     overflow: hidden;
     transform: scale(1);
     transition: 0.3s ease-in-out;
 
+<<<<<<< HEAD
     @include linkGridImage("../assets/covidmask.jpg", cover);
     box-shadow: inset 0 0 0 100vw rgba(map-get($themeColors, purple), 0.9);
     &:hover {
@@ -111,6 +200,23 @@
     .homeLink {
       @include linkGridImage("../assets/covidmask.jpg", 40%);
       @include linkGrid;
+=======
+        @include linkGridImage("../assets/covidmask.jpg", cover);
+        box-shadow: inset 0 0 0 100vw rgba(map-get($themeColors, purple), 0.9);
+        &:hover{
+            box-shadow: inset 0 0 0 100vw rgba(map-get($themeColors, purple), 0.97);
+            overflow:hidden;
+            transform: scale(1.02);
+            .homeLink{
+                transition: 0.3s ease-in-out;
+                transform: scale(1.05);
+            }
+        }
+        .homeLink{
+            @include linkGridImage("../assets/toppicks.svg", 40%);
+            @include linkGrid;
+        }
+>>>>>>> baf899b8fdca7c7adffed7c769d9137170901c28
     }
   }
 }

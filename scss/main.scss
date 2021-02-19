@@ -11,12 +11,23 @@ html {
   scroll-behavior: smooth;
 }
 
+<<<<<<< HEAD
 body {
   font-family: "open sans", sans-serif;
+=======
+@font-face { 
+ font-family: Calibri ; 
+ src: url('../assets/Calibri.ttf'); 
+} 
+
+body{
+  font-family: Calibri;  
+>>>>>>> baf899b8fdca7c7adffed7c769d9137170901c28
   height: 100%;
   width: 100%;
   margin: 0;
   color: #fff;
+  background-color: #000;
 }
 
 header {
@@ -36,11 +47,25 @@ main {
   }
 }
 
+<<<<<<< HEAD
 footer {
   background-color: #000;
   width: 100%;
   padding: 3em;
   text-align: center;
+=======
+footer{
+    background-color: #000;
+    width: 100%;
+    padding: 3em;
+    text-align: center;
+    .footerText{
+      font-size: 1.3em;
+    }
+    img{
+      padding-top: 5px;
+    }
+>>>>>>> baf899b8fdca7c7adffed7c769d9137170901c28
 }
 
 /*NAV*/
@@ -65,13 +90,32 @@ nav ul {
 nav li a {
   color: #fff;
   display: block;
-  padding: 20px 20px;
+  padding: 30px 30px;
   text-decoration: none;
+  font-size: 2em;
+  text-transform: uppercase;
 }
 
 nav li a:hover {
-  background-color: rgb(99, 30, 139);
+  background-color: #121212;
+  animation:  shake 0.8s  ; 
 }
+
+@keyframes shake{ 
+  0%{ 
+    transform: translateX(0) 
+  } 
+  25%{ 
+    transform: translateX(5px); 
+  } 
+    
+  50%{ 
+    transform: translateX(-5px); 
+  } 
+  100%{ 
+    transform: translateX(0px); 
+  } 
+} 
 
 nav .logo {
   display: none;
@@ -86,7 +130,7 @@ nav .logo {
 }
 
 /* menu */
-nav .menu {
+nav .menu{
   clear: both;
   max-height: 0;
   transition: max-height 0.2s ease-out;
@@ -135,7 +179,7 @@ nav .menu-btn {
 }
 
 nav .menu-btn:checked ~ .menu {
-  max-height: 240px;
+  max-height: 100%;
 }
 
 nav .menu-btn:checked ~ .menu-icon .nav-icon {

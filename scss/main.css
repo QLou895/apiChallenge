@@ -1,6 +1,17 @@
 @import url("https://fonts.googleapis.com/css2?family=Aclonica&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Aclonica&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Aclonica&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Aclonica&display=swap");
+@font-face {
+  font-family: Consolas;
+  src: url("../assets/Consola.TTF");
+}
+
+@font-face {
+  font-family: Britanic;
+  src: url("../assets/BRITANIC.TTF");
+}
+
 @use "sass:map";
 .grid-container {
   display: -ms-grid;
@@ -42,8 +53,12 @@
 .grid-container .myheader #homeTitle {
   font-family: 'Aclonica', sans-serif;
   letter-spacing: 2px;
-  font-size: 4.5em;
+  font-size: 4.7em;
   letter-spacing: 2px;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
   margin: 0;
   padding: 0;
   -webkit-transform: rotate(90deg);
@@ -67,6 +82,7 @@
   grid-area: random;
   height: 100vh;
   width: 100%;
+  background-color: #921B91;
   overflow: hidden;
   -webkit-transform: scale(1);
           transform: scale(1);
@@ -96,7 +112,7 @@
 
 .grid-container .random .homeLink {
   background-color: black;
-  background: url("../assets/spiderman.jpg") center center no-repeat;
+  background: url("../assets/random.svg") center center no-repeat;
   background-size: 40%;
   display: inline-table;
   height: 100%;
@@ -114,6 +130,7 @@
   grid-area: search;
   height: 100vh;
   width: 100%;
+  background-color: #232FB5;
   overflow: hidden;
   -webkit-transform: scale(1);
           transform: scale(1);
@@ -143,7 +160,7 @@
 
 .grid-container .search .homeLink {
   background-color: black;
-  background: url("../assets/puzzle.jpg") center center no-repeat;
+  background: url("../assets/search.svg") center center no-repeat;
   background-size: 40%;
   display: inline-table;
   height: 100%;
@@ -161,6 +178,7 @@
   grid-area: topPicks;
   height: 100vh;
   width: 100%;
+  background-color: #5A26A5;
   overflow: hidden;
   -webkit-transform: scale(1);
           transform: scale(1);
@@ -190,7 +208,7 @@
 
 .grid-container .topPicks .homeLink {
   background-color: black;
-  background: url("../assets/covidmask.jpg") center center no-repeat;
+  background: url("../assets/toppicks.svg") center center no-repeat;
   background-size: 40%;
   display: inline-table;
   height: 100%;
@@ -200,6 +218,7 @@
   outline: none;
 }
 
+<<<<<<< HEAD
 body {
   background-color: #2A349F;
 }
@@ -220,6 +239,45 @@ body {
       -ms-flex-pack: center;
           justify-content: center;
   width: 45%;
+=======
+@font-face {
+  font-family: Consolas;
+  src: url("../assets/Consola.TTF");
+}
+
+@font-face {
+  font-family: Britanic;
+  src: url("../assets/BRITANIC.TTF");
+}
+
+@use "sass:map";
+#random {
+  background-color: #5A26A5;
+}
+
+#random .pageMargin {
+  padding-top: 12em;
+}
+
+#random h1 {
+  letter-spacing: 2px;
+  font-size: 4em;
+  font-family: Britanic;
+}
+
+#random .mainBodySizing {
+  height: 100vh;
+}
+
+@font-face {
+  font-family: Consolas;
+  src: url("../assets/Consola.TTF");
+}
+
+@font-face {
+  font-family: Britanic;
+  src: url("../assets/BRITANIC.TTF");
+>>>>>>> baf899b8fdca7c7adffed7c769d9137170901c28
 }
 
 * {
@@ -231,12 +289,22 @@ html {
   scroll-behavior: smooth;
 }
 
+@font-face {
+  font-family: Calibri;
+  src: url("../assets/Calibri.ttf");
+}
+
 body {
+<<<<<<< HEAD
   font-family: "open sans", sans-serif;
+=======
+  font-family: Calibri;
+>>>>>>> baf899b8fdca7c7adffed7c769d9137170901c28
   height: 100%;
   width: 100%;
   margin: 0;
   color: #fff;
+  background-color: #000;
 }
 
 header {
@@ -254,6 +322,14 @@ footer {
   width: 100%;
   padding: 3em;
   text-align: center;
+}
+
+footer .footerText {
+  font-size: 1.3em;
+}
+
+footer img {
+  padding-top: 5px;
 }
 
 /*NAV*/
@@ -279,12 +355,54 @@ nav ul {
 nav li a {
   color: #fff;
   display: block;
-  padding: 20px 20px;
+  padding: 30px 30px;
   text-decoration: none;
+  font-size: 2em;
+  text-transform: uppercase;
 }
 
 nav li a:hover {
-  background-color: #631e8b;
+  background-color: #121212;
+  -webkit-animation: shake 0.8s;
+          animation: shake 0.8s;
+}
+
+@-webkit-keyframes shake {
+  0% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  25% {
+    -webkit-transform: translateX(5px);
+            transform: translateX(5px);
+  }
+  50% {
+    -webkit-transform: translateX(-5px);
+            transform: translateX(-5px);
+  }
+  100% {
+    -webkit-transform: translateX(0px);
+            transform: translateX(0px);
+  }
+}
+
+@keyframes shake {
+  0% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  25% {
+    -webkit-transform: translateX(5px);
+            transform: translateX(5px);
+  }
+  50% {
+    -webkit-transform: translateX(-5px);
+            transform: translateX(-5px);
+  }
+  100% {
+    -webkit-transform: translateX(0px);
+            transform: translateX(0px);
+  }
 }
 
 nav .logo {
@@ -355,7 +473,7 @@ nav .menu-btn {
 }
 
 nav .menu-btn:checked ~ .menu {
-  max-height: 240px;
+  max-height: 100%;
 }
 
 nav .menu-btn:checked ~ .menu-icon .nav-icon {
