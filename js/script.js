@@ -1,3 +1,4 @@
+
 var doc_div = document.querySelector("#stuff");
 var btn = document.querySelector("#rand_btn");
 

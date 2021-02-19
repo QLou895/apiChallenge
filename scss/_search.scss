@@ -1,25 +1,81 @@
+@import "_vars.scss";
+@use "sass:map";
+
 //The  stlyles for the search page
-body {
-  header {
-    text-align: center;
+#body {
+  background-color: map-get($themeColors, blue);
+
+  .pageMargin {
+    @include pageMargin;
+  }
+
+  #header1 {
+    @include h1Font(5em);
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 
   //styles for the main
-  #main {
+  .mainBodySizing {
     height: 100vh;
-  }
+    margin-top: 2%;
 
-  background-color: map-get($themeColors, darkblue);
+    #uInput {
+      margin-top: 2.5%;
+      display: flex;
+      align-items: center;
+      font-family: "Roboto";
+      justify-content: center;
+      align-content: center;
+      width: 30em;
 
-  #uInput {
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: center;
-    width: 45%;
-    margin: 100px;
-  }
+      select {
+        margin-left: 5px;
+        margin-right: 5px;
+        width: 150px;
+        border: 2px solid white;
+        background-color: map-get($themeColors, blue);
+        color: white;
+        font-size: 1.1em;
+        option {
+          background-color: white;
+          color: black;
+          width: 150px;
+        }
+      }
+      #searchButton {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 30px;
+        background-color: black;
+        color: #d6d6d6;
+        font-size: 1.1em;
+        padding-top: 7px;
+        padding-bottom: 7px;
+        padding-left: 17px;
+        padding-right: 17px;
+        border: 1px solid #4e4e4e;
+        transition-duration: 0.4s;
+        outline: none;
+        cursor: pointer;
+      }
+    }
 
-  #display {
-    height: 30vh;
+    #display {
+      font-size: 2.1em;
+      border-radius: 10px;
+      text-align: left;
+      margin-top: 3.25%;
+      margin-left: 20%;
+      margin-right: 20%;
+      padding: 2% 5%;
+      letter-spacing: 1px;
+      background-color: map-get($themeColors, darkBlue);
+      strong {
+        @include apiDataFont(0.9em);
+      }
+    }
   }
 }

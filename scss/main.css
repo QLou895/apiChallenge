@@ -3,6 +3,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Aclonica&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Aclonica&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Aclonica&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Aclonica&display=swap");
 @font-face {
   font-family: Consolas;
   src: url("../assets/Consola.TTF");
@@ -83,7 +84,7 @@
   grid-area: random;
   height: 100vh;
   width: 100%;
-  background-color: #921B91;
+  background-color: #921b91;
   overflow: hidden;
   -webkit-transform: scale(1);
           transform: scale(1);
@@ -131,7 +132,7 @@
   grid-area: search;
   height: 100vh;
   width: 100%;
-  background-color: #232FB5;
+  background-color: #232fb5;
   overflow: hidden;
   -webkit-transform: scale(1);
           transform: scale(1);
@@ -231,7 +232,7 @@
 
 @use "sass:map";
 #random {
-  background-color: #921B91;
+  background-color: #921b91;
 }
 
 #random .pageMargin {
@@ -267,7 +268,7 @@
   margin-right: 20%;
   padding: 2% 5%;
   letter-spacing: 1px;
-  background-color: #731A73;
+  background-color: #731a73;
 }
 
 #random #stuff strong {
@@ -311,35 +312,120 @@
   text-align: left;
 }
 
-body {
-  background-color: #2A349F;
+@font-face {
+  font-family: Consolas;
+  src: url("../assets/Consola.TTF");
 }
 
-body header {
-  text-align: center;
+@font-face {
+  font-family: Britanic;
+  src: url("../assets/BRITANIC.TTF");
 }
 
-body #main {
-  height: 100vh;
+@use "sass:map";
+#body {
+  background-color: #232fb5;
 }
 
-body #uInput {
+#body .pageMargin {
+  padding-top: 12em;
+}
+
+#body #header1 {
+  letter-spacing: 2px;
+  font-size: 5em;
+  font-family: Britanic;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: row nowrap;
-          flex-flow: row nowrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  width: 45%;
-  margin: 100px;
 }
 
-body #display {
-  height: 30vh;
+#body .mainBodySizing {
+  height: 100vh;
+  margin-top: 2%;
+}
+
+#body .mainBodySizing #uInput {
+  margin-top: 2.5%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-family: "Roboto";
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  width: 30em;
+}
+
+#body .mainBodySizing #uInput select {
+  margin-left: 5px;
+  margin-right: 5px;
+  width: 150px;
+  border: 2px solid white;
+  background-color: #232fb5;
+  color: white;
+  font-size: 1.1em;
+}
+
+#body .mainBodySizing #uInput select option {
+  background-color: white;
+  color: black;
+  width: 150px;
+}
+
+#body .mainBodySizing #uInput #searchButton {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-radius: 30px;
+  background-color: black;
+  color: #d6d6d6;
+  font-size: 1.1em;
+  padding-top: 7px;
+  padding-bottom: 7px;
+  padding-left: 17px;
+  padding-right: 17px;
+  border: 1px solid #4e4e4e;
+  -webkit-transition-duration: 0.4s;
+          transition-duration: 0.4s;
+  outline: none;
+  cursor: pointer;
+}
+
+#body .mainBodySizing #display {
+  font-size: 2.1em;
+  border-radius: 10px;
+  text-align: left;
+  margin-top: 3.25%;
+  margin-left: 20%;
+  margin-right: 20%;
+  padding: 2% 5%;
+  letter-spacing: 1px;
+  background-color: #252e96;
+}
+
+#body .mainBodySizing #display strong {
+  font-family: Consolas;
+  font-weight: 700;
+  font-size: 0.9em;
+  letter-spacing: 1px;
 }
 
 @font-face {
@@ -400,7 +486,11 @@ body #display {
   width: 30%;
 }
 
-#topPicks #selectedActivities .act #activity1, #topPicks #selectedActivities .act #activity2, #topPicks #selectedActivities .act #activity3, #topPicks #selectedActivities .act #activity4, #topPicks #selectedActivities .act #activity5 {
+#topPicks #selectedActivities .act #activity1,
+#topPicks #selectedActivities .act #activity2,
+#topPicks #selectedActivities .act #activity3,
+#topPicks #selectedActivities .act #activity4,
+#topPicks #selectedActivities .act #activity5 {
   font-size: 2.1em;
   border-radius: 10px;
   text-align: center;
@@ -412,7 +502,11 @@ body #display {
   text-align: left;
 }
 
-#topPicks #selectedActivities .act #activity1 strong, #topPicks #selectedActivities .act #activity2 strong, #topPicks #selectedActivities .act #activity3 strong, #topPicks #selectedActivities .act #activity4 strong, #topPicks #selectedActivities .act #activity5 strong {
+#topPicks #selectedActivities .act #activity1 strong,
+#topPicks #selectedActivities .act #activity2 strong,
+#topPicks #selectedActivities .act #activity3 strong,
+#topPicks #selectedActivities .act #activity4 strong,
+#topPicks #selectedActivities .act #activity5 strong {
   font-family: Consolas;
   font-weight: 700;
   font-size: 0.9em;
