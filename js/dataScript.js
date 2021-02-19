@@ -3,12 +3,12 @@ function relabelData(dataName, dataValue){
     // dataName = price, accessibility
     // dataValue = data.price, data.accessibility
 
-    // call function = relabelData("price", data.price);
+    // call function = relabelData(0, data.price);
 
     var label = "";
 
     switch(dataName){
-        case 'price':
+        case 0: //price
             if (dataValue == 0){
                 label = "Free";
             } else if (dataValue > 0 && dataValue < 0.2){
@@ -25,7 +25,7 @@ function relabelData(dataName, dataValue){
                 label = "$65.00+";
             }
             break;
-        case 'accessibility':
+        case 1: //accessibility
             if(dataValue >= 0 && dataValue <=0.25){
                 label = "Effortless";
             }else if(dataValue > 0.25 && dataValue <=0.5){
