@@ -1,0 +1,25 @@
+@import '_vars.scss';
+@use "sass:map";
+
+#topPicks {
+
+    background-color: map-get($themeColors, purple);
+    .pageMargin {
+        @include pageMargin;
+        h1{
+            @include h1Font(4em);
+            text-align:center;
+        }
+    }
+
+    .num {
+        @include h1Font(5em);
+        text-align: center;
+    }
+
+    
+    
+}
+
+
+

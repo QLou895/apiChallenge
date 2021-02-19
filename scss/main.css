@@ -2,6 +2,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Aclonica&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Aclonica&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Aclonica&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Aclonica&display=swap");
 @font-face {
   font-family: Consolas;
   src: url("../assets/Consola.TTF");
@@ -22,9 +23,7 @@
   -ms-grid-rows: 1fr 1fr 1fr;
       grid-template-rows: 1fr 1fr 1fr;
   gap: 0px 0px;
-      grid-template-areas: "myheader random random search search topPicks topPicks"
- "myheader random random search search topPicks topPicks"
- "myheader random random search search topPicks topPicks";
+      grid-template-areas: "myheader random random search search topPicks topPicks" "myheader random random search search topPicks topPicks" "myheader random random search search topPicks topPicks";
   background-color: black;
 }
 
@@ -247,6 +246,39 @@
 
 #random .mainBodySizing {
   height: 100vh;
+}
+
+@font-face {
+  font-family: Consolas;
+  src: url("../assets/Consola.TTF");
+}
+
+@font-face {
+  font-family: Britanic;
+  src: url("../assets/BRITANIC.TTF");
+}
+
+@use "sass:map";
+#topPicks {
+  background-color: #5A26A5;
+}
+
+#topPicks .pageMargin {
+  padding-top: 12em;
+}
+
+#topPicks .pageMargin h1 {
+  letter-spacing: 2px;
+  font-size: 4em;
+  font-family: Britanic;
+  text-align: center;
+}
+
+#topPicks .num {
+  letter-spacing: 2px;
+  font-size: 5em;
+  font-family: Britanic;
+  text-align: center;
 }
 
 @font-face {
