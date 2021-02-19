@@ -21,6 +21,7 @@ body{
   width: 100%;
   margin: 0;
   color: #fff;
+  background-color: #000;
 }
 
 header{
@@ -38,6 +39,12 @@ footer{
     width: 100%;
     padding: 3em;
     text-align: center;
+    .footerText{
+      font-size: 1.3em;
+    }
+    img{
+      padding-top: 5px;
+    }
 }
 
 
@@ -71,7 +78,24 @@ nav li a {
 
 nav li a:hover {
   background-color: #121212;
+  animation:  shake 0.8s  ; 
 }
+
+@keyframes shake{ 
+  0%{ 
+    transform: translateX(0) 
+  } 
+  25%{ 
+    transform: translateX(5px); 
+  } 
+    
+  50%{ 
+    transform: translateX(-5px); 
+  } 
+  100%{ 
+    transform: translateX(0px); 
+  } 
+} 
 
 nav .logo {
   display: none;
