@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="scss/main.css">
     <script src="js/icon.js"></script>
     </head>
-    <body id="random">
+    <body id="random" onload="generateData()">
         <nav>
             <a href="/" class="logo">BORED?</a>
             <input class="menu-btn" type="checkbox" id="menu-btn" />
@@ -22,8 +22,8 @@
         <header class="pageMargin">
             <h1>Random Activity</h1>
         </header>
+        <br>
         <main class="mainBodySizing">
-            <body onload="generateData()">
             <div id="stuff"></div>
             <br>
             <button id="rand_btn">random</button>
