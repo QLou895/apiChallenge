@@ -1,57 +1,107 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
+
+<head>
     <title>Bored?</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="scss/main.css">
-    </head>
-    <body>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="random.html">Random</a></li>
-                <li><a href="search.html">Search</a></li>
-                <li><a href="toppicks.html">Top Picks</a></li>
-            </ul>
-        </nav>
-        <header>
-            <h1>Search</h1>
-        </header>
+    <script rel="text/javascript" src="js/icon.js"></script>
 
-        <main>
-            <form action="">
-                <select name="type" id="type">
-                    <option hidden selected value="null">type of activity</option>
-                </select>
-                <select name="minprice" id="minprice">
-                    <option hidden selected value="null">minimum price</option>
-                </select>
-                <select name="maxprice" id="maxprice">
-                    <option hidden selected value="null">maximum price</option>
-                </select>
-                <select name="part" id="part">
-                    <option hidden selected value="null">participants</option>
-                </select>
-                <select name="access" id="access">
-                    <option hidden selected value="null">accessibility</option>
-                </select>
-                <button id="searchButton">search</button>
-            </form>
-        </main>
+</head>
+
+<body id="body">
+    <nav>
+        <a href="/" class="logo">BORED?</a>
+        <input class="menu-btn" type="checkbox" id="menu-btn" />
+        <label class="menu-icon" for="menu-btn"><span class="nav-icon"></span></label>
+        <ul class="menu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="random.html">Random</a></li>
+            <li><a href="search.html" class="active">Search</a></li>
+            <li><a href="toppicks.html">Top Picks</a></li>
+        </ul>
+    </nav>
+    
+    <header class="pageMargin">
+        <h1 id="header1">Search Activity</h1>
+    </header>
+
+    <main class="mainBodySizing">
+        <div action="" name="uInput" id="uInput">
+            <!-- this dropdown list allows the user to select an activity  -->
+            <select name="type" id="type">
+                <option hidden value="null">type of activity</option>
+                <option value="education">Education</option>
+                <option value="recreational">Recreational</option>
+                <option value="social">Social</option>
+                <option value="diy">D.I.Y</option>
+                <option value="charity">Charity</option>
+                <option value="relaxation">Relaxation</option>
+                <option value="music">Music</option>
+                <option value="busywork">Busywork</option>
+            </select>
+
+            <!-- the least a user wants to spend -->
+            <select name="minprice" id="minprice">
+                <option hidden value="null">Minimum Price</option>
+                <option value="0.0">Free</option>
+                <option value="0.2">$15-25</option>
+                <option value="0.3">$25-35</option>
+            </select>
+
+            <!-- the most a user wants to spend -->
+            <select name="maxprice" id="maxprice">
+                <option hidden value="null">Maximum Price</option>
+                <option value="0.5">$35-45</option>
+                <option value="0.75">$55-65</option>
+                <option value="1.0">$65+</option>
+            </select>
+
+            <!-- this is dropdown list will allow the user to select the quantity of their party -->
+            <select name="part" id="part">
+                <option hidden value="null">participants</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+            </select>
+
+            <!-- the possibility of an event -->
+            <select name="access" id="access">
+                <option hidden value="null">Accessibility</option>
+                <option value="0.25">Effortless</option>
+                <option value="0.5">Moderate</option>
+                <option value="1.0">Concentrated</option>
+            </select>
+
+            <button id="searchButton">Search</button>
+        </div>
+
+        <div id="display"></div>
+    </main>
 
         <footer>
             <div class="footerContainer">
                 <div class="footerContent">
-                  <p class="footerText">Group-D &copy; 2021</p>
-                  <p class="footerText">Shelly Penichet | Lou Q | Remy's Name | Grace Hechavarria</p>
-                  <div id="footerSocial"> 
-                      <a href="https://github.com/QLou895/apiChallenge" target="_blank">Github</a>
-                  </div>
+                    <p class="footerText">Group-D &copy; 2021</p>
+                    <p class="footerText">Shelly Penichet | Luis Quinones | Remy Pearson | Grace Hechavarria</p>
+                    <div id="footerSocial">
+                        <a href="https://github.com/QLou895/apiChallenge" target="_blank"><img src="assets/github.svg"
+                                alt="github logo" id="github" width="30" height="30" onmouseover="githubmouseOver();"
+                                onmouseout="githubmouseOut();"></a>
+                    </div>
                 </div>
-              </div>
+            </div>
         </footer>
 
-        <script src="js/scripts.js"></script>
-    </body>
+    <script defer type="text/javascript" src="js/search.js"></script>
+</body>
+
 </html>

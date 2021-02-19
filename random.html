@@ -5,38 +5,45 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="scss/main.css">
+    <script src="js/icon.js"></script>
     </head>
-    <body>
+    <body id="random" onload="generateData()">
         <nav>
-            <ul>
+            <a href="/" class="logo">BORED?</a>
+            <input class="menu-btn" type="checkbox" id="menu-btn" />
+            <label class="menu-icon" for="menu-btn"><span class="nav-icon"></span></label>
+            <ul class="menu">
                 <li><a href="index.html">Home</a></li>
-                <li><a href="random.html">Random</a></li>
+                <li><a href="random.html" class="active">Random</a></li>
                 <li><a href="search.html">Search</a></li>
                 <li><a href="toppicks.html">Top Picks</a></li>
             </ul>
         </nav>
-        <header>
+        <header class="pageMargin">
             <h1>Random Activity</h1>
         </header>
-        <main>
-            <section></section>
-            <form action="">
-                <button id="randButton">random<button>
-            </form>
+        <!-- <br> -->
+        <main class="mainBodySizing">
+            <div id="stuff"></div>
+            <br><br>
+            <button id="rand_btn"><strong>&nbsp;&nbsp;random&nbsp;&nbsp;</strong></button>
+            <script src="js/script.js"></script>
+            <script src="js/dataScript.js"></script>
+            
         </main>
 
         <footer>
             <div class="footerContainer">
                 <div class="footerContent">
                   <p class="footerText">Group-D &copy; 2021</p>
-                  <p class="footerText">Shelly Penichet | Lou Q | Remy's Name | Grace Hechavarria</p>
+                  <p class="footerText">Shelly Penichet | Luis Quinones | Remy Pearson | Grace Hechavarria</p>
                   <div id="footerSocial"> 
-                      <a href="https://github.com/QLou895/apiChallenge" target="_blank">Github</a>
+                      <a href="https://github.com/QLou895/apiChallenge" target="_blank"><img src="assets/github.svg" alt="github logo" id="github" width="30" height="30" onmouseover="githubmouseOver();" onmouseout="githubmouseOut();"></a>
                   </div>
                 </div>
               </div>
         </footer>
 
-        <script src="js/scripts.js"></script>
+        
     </body>
 </html>

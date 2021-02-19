@@ -1,0 +1,58 @@
+$themeColors: (
+  pink: #921b91,
+  blue: #232fb5,
+  purple: #6133a6,
+  darkPink: #731a73,
+  darkBlue: #252e96,
+  darkPurple: #552c91,
+);
+
+@import url("https://fonts.googleapis.com/css2?family=Aclonica&display=swap");
+
+@mixin titleFont($size) {
+  font-family: Britanic;
+  letter-spacing: 2px;
+  font-size: $size;
+}
+
+@font-face {
+  font-family: Consolas;
+  src: url("../assets/Consola.TTF");
+}
+
+@mixin apiDataFont($size) {
+  font-family: Consolas;
+  font-weight: 700;
+  font-size: $size;
+  letter-spacing: 1px;
+}
+
+@font-face {
+  font-family: Britanic;
+  src: url("../assets/BRITANIC.TTF");
+}
+
+@mixin h1Font($size) {
+  letter-spacing: 2px;
+  font-size: $size;
+  font-family: Britanic;
+}
+
+@mixin linkGrid {
+  display: inline-table;
+  height: 100%;
+  width: 100%;
+  border: 0;
+  text-decoration: none;
+  outline: none;
+}
+
+@mixin linkGridImage($image, $size) {
+  background-color: black; //fallback color
+  background: url($image) center center no-repeat;
+  background-size: $size;
+}
+
+@mixin pageMargin {
+  padding-top: 12em;
+}
