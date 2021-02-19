@@ -1,11 +1,11 @@
 $themeColors: (
     pink: #921B91,
     blue: #232FB5,
-    purple: #5A26A5,
+    purple: #6133a6,
 
     darkPink: #731A73,
     darkBlue: #2A349F,
-    darkPurple: #552C91,
+    darkPurple: #552c91,
 );
 
 @import url('https://fonts.googleapis.com/css2?family=Aclonica&display=swap');
@@ -21,12 +21,13 @@ $themeColors: (
     src: url('../assets/Consola.TTF');
 }
 
-@mixin apiDataFont{
+@mixin apiDataFont($size){
     font-family: Consolas;
     font-weight: 700;
-    font-size: 16px;
+    font-size: $size;
     letter-spacing: 1px;
 }
+
 
 @font-face{
     font-family: Britanic;

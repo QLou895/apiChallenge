@@ -179,7 +179,7 @@
   grid-area: topPicks;
   height: 100vh;
   width: 100%;
-  background-color: #5A26A5;
+  background-color: #6133a6;
   overflow: hidden;
   -webkit-transform: scale(1);
           transform: scale(1);
@@ -188,13 +188,13 @@
   background-color: black;
   background: url("../assets/covidmask.jpg") center center no-repeat;
   background-size: cover;
-  -webkit-box-shadow: inset 0 0 0 100vw rgba(90, 38, 165, 0.9);
-          box-shadow: inset 0 0 0 100vw rgba(90, 38, 165, 0.9);
+  -webkit-box-shadow: inset 0 0 0 100vw rgba(97, 51, 166, 0.9);
+          box-shadow: inset 0 0 0 100vw rgba(97, 51, 166, 0.9);
 }
 
 .grid-container .topPicks:hover {
-  -webkit-box-shadow: inset 0 0 0 100vw rgba(90, 38, 165, 0.97);
-          box-shadow: inset 0 0 0 100vw rgba(90, 38, 165, 0.97);
+  -webkit-box-shadow: inset 0 0 0 100vw rgba(97, 51, 166, 0.97);
+          box-shadow: inset 0 0 0 100vw rgba(97, 51, 166, 0.97);
   overflow: hidden;
   -webkit-transform: scale(1.02);
           transform: scale(1.02);
@@ -240,7 +240,7 @@
 
 #random h1 {
   letter-spacing: 2px;
-  font-size: 4em;
+  font-size: 5em;
   font-family: Britanic;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -255,12 +255,14 @@
 
 #random .mainBodySizing {
   height: 100vh;
+  margin-top: 2%;
 }
 
 #random #stuff {
-  font-size: 19px;
-  border-radius: 7px;
+  font-size: 2.1em;
+  border-radius: 10px;
   text-align: center;
+  margin-top: 0;
   margin-left: 20%;
   margin-right: 20%;
   padding: 2% 5%;
@@ -271,7 +273,7 @@
 #random #stuff strong {
   font-family: Consolas;
   font-weight: 700;
-  font-size: 16px;
+  font-size: 0.9em;
   letter-spacing: 1px;
 }
 
@@ -288,7 +290,7 @@
   border-radius: 30px;
   background-color: #000000;
   color: #d6d6d6;
-  font-size: 1.5em;
+  font-size: 2em;
   padding-top: .7%;
   padding-bottom: .7%;
   padding-left: 2.5%;
@@ -321,7 +323,7 @@
 
 @use "sass:map";
 #topPicks {
-  background-color: #5A26A5;
+  background-color: #6133a6;
 }
 
 #topPicks .pageMargin {
@@ -330,16 +332,59 @@
 
 #topPicks .pageMargin h1 {
   letter-spacing: 2px;
-  font-size: 4em;
+  font-size: 5em;
   font-family: Britanic;
   text-align: center;
 }
 
-#topPicks .num {
+#topPicks #selectedActivities {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+#topPicks #selectedActivities .act {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  margin: 2% 0;
+}
+
+#topPicks #selectedActivities .act .num {
   letter-spacing: 2px;
-  font-size: 5em;
+  font-size: 9em;
   font-family: Britanic;
+  text-align: right;
+  width: 30%;
+}
+
+#topPicks #selectedActivities .act #activity1, #topPicks #selectedActivities .act #activity2, #topPicks #selectedActivities .act #activity3, #topPicks #selectedActivities .act #activity4, #topPicks #selectedActivities .act #activity5 {
+  font-size: 2.1em;
+  border-radius: 10px;
   text-align: center;
+  width: 70%;
+  margin-left: 5%;
+  margin-right: 20%;
+  padding: 2% 5%;
+  background-color: #552c91;
+  text-align: left;
+}
+
+#topPicks #selectedActivities .act #activity1 strong, #topPicks #selectedActivities .act #activity2 strong, #topPicks #selectedActivities .act #activity3 strong, #topPicks #selectedActivities .act #activity4 strong, #topPicks #selectedActivities .act #activity5 strong {
+  font-family: Consolas;
+  font-weight: 700;
+  font-size: 0.9em;
+  letter-spacing: 1px;
 }
 
 @font-face {
@@ -388,12 +433,13 @@ main {
 footer {
   background-color: #000;
   width: 100%;
-  padding: 3em;
+  margin: 0;
+  padding: 3em 0;
   text-align: center;
 }
 
 footer .footerText {
-  font-size: 1.3em;
+  font-size: 1.5em;
 }
 
 footer img {
