@@ -31,7 +31,7 @@
         <form name="uInput" id="uInput">
             <!-- this dropdown list allows the user to select an activity  -->
             <select name="type" id="type">
-                <option hidden selected value="">type of activity</option>
+                <option hidden value="">type of activity</option>
                 <option value="education">Education</option>
                 <option value="recreational">Recreational</option>
                 <option value="social">Social</option>
@@ -44,7 +44,7 @@
 
             <!-- the least a user wants to spend -->
             <select name="minprice" id="minprice">
-                <option hidden selected value="0.0">Minimum Price</option>
+                <option hidden value="null">Minimum Price</option>
                 <option value="0.0">Free</option>
                 <option value="0.2">$15-25</option>
                 <option value="0.3">$25-35</option>
@@ -52,7 +52,7 @@
 
             <!-- the most a user wants to spend -->
             <select name="maxprice" id="maxprice">
-                <option hidden selected value="0.0">Maximum Price</option>
+                <option hidden selected value="null">Maximum Price</option>
                 <option value="0.5">$35-45</option>
                 <option value="0.75">$55-65</option>
                 <option value="1.0">$65+</option>
@@ -78,7 +78,7 @@
                 <option hidden selected value="0.0">Accessibility</option>
                 <option value="0.25">Effortless</option>
                 <option value="0.5">Moderate</option>
-                <option value="1.0">Concetrated</option>
+                <option value="1.0">Concentrated</option>
             </select>
 
             <button id="searchButton">Search</button>

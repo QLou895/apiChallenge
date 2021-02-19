@@ -1,13 +1,53 @@
 // this function will retrieve the data from the form -> uInput
-var input = document.querySelector("form").elements;
-// console.log(input);
 
-function getData(){
 
-  // select-option
-  input
+var btn = document.getElementById("searchButton");
+
+
+async function getData() {
+  // variables to collect data
+  var op1 = document.querySelector("#type");
+  var op2 = document.querySelector("#minprice");
+  var op3 = document.querySelector("#maxprice");
+  var op4 = document.querySelector("#part");
+  var op5 = document.querySelector("#access");
+
+  // variables to display the data
+  var out1 = op1.options[op1.selectedIndex].value;
+  var out2 = op2.options[op2.selectedIndex].value;
+  var out3 = op3.options[op3.selectedIndex].value;
+  var out4 = op4.options[op4.selectedIndex].value;
+  var out5 = op5.options[op5.selectedIndex].value;
+
+  var input = await fetch('https://www.boredapi.com/api/activity?accessibility='+out5+'&type='+out1+'&participants='+out4+'&minprice='+out2+'&maxprice='+out3);
+  
+  var data = await input.json();
+  alert(data.activity);
+
+  // if (out2 != null & out3 == null) {
+  //   // data = await fetch(`http://www.boredapi.com/api/activity?accessibility=${access}&type=${type}&paticipants=var&price=var`);
+  //   console.log("hello");
+
+  // }
+  // else if(out3 != null & out2 == null){
+  //   // data = await fetch(`http://www.boredapi.com/api/activity?accessibility=${access}&type=${type}&paticipants=var&price=var`);
+  //   console.log("meow");
+
+  // } 
+  // else {
+  // // var data = await fetch(`https://www.boredapi.com/api/activity?accessibility=${out5}&type=${out1}&paticipants=${out4}&minprice=${out2}&maxprice=${out3}`)
+  //   console.log("ello");
+
+  // }
 }
-btn.addEventListener('click', generateData);
+btn.addEventListener('click', getData);
+
+
+
+  
+
+
+
 
 
 // http://www.boredapi.com/api/activity?accessibility=${access}&type=${type}&paticipants=var&price=var
@@ -106,7 +146,7 @@ btn.addEventListener('click', generateData);
   // copy
   balapaCop("Select Input Interaction", "rgba(255,255,255,.5)");
 });
- */
+
 
 
 
@@ -121,7 +161,7 @@ btn.addEventListener('click', generateData);
 
 
 var doc_div = document.querySelector("#menuList");
-var btn = document.querySelector("#searchButton");
+
 
 // a function to pull the values from the form
     // validate and check price range
@@ -145,7 +185,7 @@ async function generateData() {
 
 }
 
-
+ */
 /********************************* note to self *****************************
     this will be a var --> var something = activity=value 
     

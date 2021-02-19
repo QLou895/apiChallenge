@@ -3,16 +3,19 @@ body {
   header {
     text-align: center;
   }
-  background-color: map-get($themeColors, darkblue);
-}
-//styles for the main
-#main {
-  height: 100vh;
-}
 
-#menuList {
-  display: flex;
-  flex-flow: row nowrap;
-  justify-content: center;
-  width: 45%;
+  //styles for the main
+  #main {
+    height: 100vh;
+  }
+
+  background-color: map-get($themeColors, darkblue);
+
+  #uInput {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    width: 45%;
+    margin: 100px;
+  }
 }
