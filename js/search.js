@@ -54,7 +54,7 @@ function relabelData(dataName, dataValue){
 async function getData() {
   // variables to collect data
 
-    doc_div.innerHTML="<img src='https://media.giphy.com/media/itPPg72momesJtM1PZ/giphy.gif' style='text-align:center' width=300px height=300px>";
+    doc_div.innerHTML="<img src='https://media.giphy.com/media/2y2Egeju1Fu7e/giphy.gif' style='display:block;margin-left: auto; margin-right:auto;' width=300px height=300px>";
 
     var op1 = document.querySelector('#type option:checked').value;
     var op2 = document.querySelector('#minprice option:checked').value;
