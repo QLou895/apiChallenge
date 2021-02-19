@@ -1,5 +1,3 @@
-// generatePick("activity3", 5);
-//async means do your thing in the background so everything can continue to work
 
 
 async function generatePick(mydiv, num){
