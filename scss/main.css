@@ -262,7 +262,7 @@ body {
 
 #random h1 {
   letter-spacing: 2px;
-  font-size: 4em;
+  font-size: 5em;
   font-family: Britanic;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -277,12 +277,14 @@ body {
 
 #random .mainBodySizing {
   height: 100vh;
+  margin-top: 2%;
 }
 
 #random #stuff {
-  font-size: 19px;
-  border-radius: 7px;
+  font-size: 2.1em;
+  border-radius: 10px;
   text-align: center;
+  margin-top: 0;
   margin-left: 20%;
   margin-right: 20%;
   padding: 2% 5%;
@@ -293,7 +295,7 @@ body {
 #random #stuff strong {
   font-family: Consolas;
   font-weight: 700;
-  font-size: 16px;
+  font-size: 0.9em;
   letter-spacing: 1px;
 }
 
@@ -310,7 +312,7 @@ body {
   border-radius: 30px;
   background-color: #000000;
   color: #d6d6d6;
-  font-size: 1.5em;
+  font-size: 2em;
   padding-top: .7%;
   padding-bottom: .7%;
   padding-left: 1%;
@@ -352,7 +354,7 @@ body {
 
 #topPicks .pageMargin h1 {
   letter-spacing: 2px;
-  font-size: 4em;
+  font-size: 5em;
   font-family: Britanic;
   text-align: center;
 }
@@ -382,15 +384,15 @@ body {
 
 #topPicks #selectedActivities .act .num {
   letter-spacing: 2px;
-  font-size: 5em;
+  font-size: 9em;
   font-family: Britanic;
   text-align: right;
   width: 30%;
 }
 
 #topPicks #selectedActivities .act #activity1, #topPicks #selectedActivities .act #activity2, #topPicks #selectedActivities .act #activity3, #topPicks #selectedActivities .act #activity4, #topPicks #selectedActivities .act #activity5 {
-  font-size: 19px;
-  border-radius: 7px;
+  font-size: 2.1em;
+  border-radius: 10px;
   text-align: center;
   width: 70%;
   margin-left: 5%;
@@ -403,7 +405,7 @@ body {
 #topPicks #selectedActivities .act #activity1 strong, #topPicks #selectedActivities .act #activity2 strong, #topPicks #selectedActivities .act #activity3 strong, #topPicks #selectedActivities .act #activity4 strong, #topPicks #selectedActivities .act #activity5 strong {
   font-family: Consolas;
   font-weight: 700;
-  font-size: 16px;
+  font-size: 0.9em;
   letter-spacing: 1px;
 }
 
@@ -458,12 +460,13 @@ main {
 footer {
   background-color: #000;
   width: 100%;
-  padding: 3em;
+  margin: 0;
+  padding: 3em 0;
   text-align: center;
 }
 
 footer .footerText {
-  font-size: 1.3em;
+  font-size: 1.5em;
 }
 
 footer img {
