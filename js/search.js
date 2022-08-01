@@ -5,11 +5,6 @@ var btn = document.getElementById("searchButton");
 var doc_div = document.querySelector("#display");
 
 function relabelData(dataName, dataValue){
-    // parameters:
-    // dataName = price, accessibility
-    // dataValue = data.price, data.accessibility
-
-    // call function = relabelData(0, data.price);
 
     var label = "";
 
@@ -44,12 +39,9 @@ function relabelData(dataName, dataValue){
             label = "Renaming Error"
             console.log("data naming error");
     }
-
     return label;
 
 }
-
-
 
 async function getData() {
 
@@ -65,44 +57,59 @@ async function getData() {
 
     // Formating the retreaved data
     var queryAccess, queryParts, queryMax, queryMin, queryType;
+    /*
+        Change to "URL" obj
+        URLSearchParams is a constructor 
+        -- let url = new url('https://boredapi.com/api/activity'); | not placing the "?" due to low enderstanding on how search will behave.
+        
+        -- url.search.set() | test_1
+        
+        -- url search param (usp) | let usp = new URLSeachParams(str)
+            --Allows the use of "for" loop and "set()" method
 
-    if(op1 == null){
-        queryType = "";
-    }else{
-        queryType = "type=" + op1;
+
+        -----------------------------pseudo----------------------------------------
+
+        for loop to check all the collected data for null values. 
+            If a null is found do not add to URL (or DELETE) name/value from USP 
+
+        Take all values and add them to USP to create a search var?
+        Or in for loop add them to USP till loops ends and add that to fetch?
+
+    */
+    // creating an obj to append to fetch
+    const usp = new URLSearchParams({
+        
+        accessibility: op5,
+        type: op1,
+        participants: op4,
+        minprice: op2,
+        maxprice: op3
+    });
+ 
+    for([key,value] of usp) 
+
+        console.log(`${key} => ${value}`);
+
+        // broken
+        if(`${key}` == null)
+        {
+         usp.delete(`${key}`);
+        }
     }
 
-    if(op2 == null){
-        queryMin = "";
-    }else{
-        queryMin = "minprice="+ op2;
-    }
-
-    if(op3 == null){
-        queryMax = "";
-    }else{
-        queryMax = "maxprice="+ op3;
-    }
-
-    if(op5 == null){
-        queryAccess = "";
-    }else{
-        queryAccess = "accessibility="+ op5;
-    }
-
-    if(op4 == null){
-        queryParts = "";
-    }else{
-        queryParts = "participants="+ op4;
-    }
+     
     // Api fetch
-    const response = await fetch('https://www.boredapi.com/api/activity?'+ queryAccess + '&' + queryType + '&' + queryParts + '&' + queryMin + '&' + queryMax);
+    const url = new URL('https://www.boredapi.com/api/activity?');
+
+    const response = await fetch( url + usp );
     const data = await response.json();
 
     console.log(response.url);
     console.log(data);
+    console.log(usp);
 
-        // Error Handling
+    // Error Handling
     if (!data.error) {
         const typeUpper = data.type[0].toUpperCase() + data.type.substring(1);
         
