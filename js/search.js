@@ -96,7 +96,7 @@ async function getData() {
         {
          usp.delete(`${key}`);
         }
-    }
+    
 
      
     // Api fetch
