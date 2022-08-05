@@ -45,7 +45,7 @@ function relabelData(dataName, dataValue){
 
 async function getData() {
 
-    //variables to collect data from search html
+    // Variables to collect data from search html
     doc_div.innerHTML="<img src='https://media.giphy.com/media/2y2Egeju1Fu7e/giphy.gif' style='display:block;margin-left: auto; margin-right:auto;' width=200px height=200px>";
 
     var op1 = document.querySelector('#type option:checked').value;
@@ -53,31 +53,11 @@ async function getData() {
     var op3 = document.querySelector('#maxprice option:checked').value;
     var op4 = document.querySelector('#part option:checked').value;
     var op5 = document.querySelector('#access option:checked').value;
-
-
-    // Formating the retreaved data
-    var queryAccess, queryParts, queryMax, queryMin, queryType;
-    /*
-        Change to "URL" obj
-        URLSearchParams is a constructor 
-        -- let url = new url('https://boredapi.com/api/activity'); | not placing the "?" due to low enderstanding on how search will behave.
-        
-        -- url.search.set() | test_1
-        
-        -- url search param (usp) | let usp = new URLSeachParams(str)
-            --Allows the use of "for" loop and "set()" method
-
-
-        -----------------------------pseudo----------------------------------------
-
-        for loop to check all the collected data for null values. 
-            If a null is found do not add to URL (or DELETE) name/value from USP 
-
-        Take all values and add them to USP to create a search var?
-        Or in for loop add them to USP till loops ends and add that to fetch?
-
-    */
-    // creating an obj to append to fetch
+    
+    // The API url needed to make the fetch call
+    const url = new URL('https://www.boredapi.com/api/activity');
+   
+   // Formating the retreaved data into a usp object
     const usp = new URLSearchParams({
         
         accessibility: op5,
@@ -86,28 +66,25 @@ async function getData() {
         minprice: op2,
         maxprice: op3
     });
- 
-    for([key,value] of usp) 
-
-        console.log(`${key} => ${value}`);
-
-        // broken
-        if(`${key}` == null)
-        {
-         usp.delete(`${key}`);
-        }
     
+    // for each value with null will be removed from the usp object
+    usp.forEach((value, key) => {
+        // console.log(usp.toString());
 
-     
+        if(value.toString() == 'null'){            
+            usp.delete(key);
+        }
+    });
+
+    // Appending the usp object to the url object
+    url.search = usp.toString();
+        
     // Api fetch
-    const url = new URL('https://www.boredapi.com/api/activity?');
-
-    const response = await fetch( url + usp );
+    const response = await fetch( url);
     const data = await response.json();
 
-    console.log(response.url);
-    console.log(data);
-    console.log(usp);
+    // console.log(response.url);
+    // console.log(data);
 
     // Error Handling
     if (!data.error) {
