@@ -88,7 +88,7 @@ async function getData() {
     const response = await fetch( url);
     const data = await response.json();
 
-    console.log(response.url);
+    //console.log(response.url);
     // console.log(data);
 
 
