@@ -53,11 +53,15 @@ async function getData() {
     var op3 = document.querySelector('#maxprice option:checked').value;
     var op4 = document.querySelector('#part option:checked').value;
     var op5 = document.querySelector('#access option:checked').value;
+
+
     
-    // The API url needed to make the fetch call
+    // The API
     const url = new URL('https://www.boredapi.com/api/activity');
+
+
    
-   // Formating the retreaved data into a usp object
+   // Formating
     const usp = new URLSearchParams({
         
         accessibility: op5,
@@ -66,25 +70,27 @@ async function getData() {
         minprice: op2,
         maxprice: op3
     });
+
     
-    // for each value with null will be removed from the usp object
     usp.forEach((value, key) => {
-        // console.log(usp.toString());
+        console.log(usp.toString());
+        console.log(value);
 
         if(value.toString() == 'null'){            
             usp.delete(key);
         }
     });
 
-    // Appending the usp object to the url object
+
     url.search = usp.toString();
+
         
-    // Api fetch
     const response = await fetch( url);
     const data = await response.json();
 
-    // console.log(response.url);
+    console.log(response.url);
     // console.log(data);
+
 
     // Error Handling
     if (!data.error) {
