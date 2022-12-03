@@ -79,16 +79,19 @@ async function getData() {
         if(value.toString() == 'null'){            
             usp.delete(key);
         }
+        if(value.toString() == null){
+            usp.delete(key);
+        }
     });
 
 
     url.search = usp.toString();
 
         
-    const response = await fetch( url);
+    const response = await fetch(url);
     const data = await response.json();
 
-    //console.log(response.url);
+    console.log(response.url);
     // console.log(data);
 
 
@@ -97,6 +100,7 @@ async function getData() {
         const typeUpper = data.type[0].toUpperCase() + data.type.substring(1);
         
         doc_div.innerHTML = "<strong>Activity: </strong>" + data.activity + "<br><strong>Accessibility: </strong>" + relabelData(1, data.accessibility) + "<br><strong>Type: </strong>" + typeUpper + "<br><strong>Participants: </strong>" + data.participants + "<br><strong>Price: </strong>" + relabelData(0, data.price);
+
     }else{
         doc_div.innerHTML = "Error: " + data.error;
     }
