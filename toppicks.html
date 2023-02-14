@@ -5,9 +5,9 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="scss/main.css">
-    <script src="js/icon.js"></script>
-    <script src="js/script.js"></script>
+    <script defer rel="text/javascript" src="js/icon.js"></script>
     </head>
+    
     <body id="topPicks" >
        <nav>
             <a href="/" class="logo">BORED?</a>
@@ -61,11 +61,14 @@
                 </div>
               </div>
         </footer>
+
+        <script rel="text/javascript" src="js/script.js"></script>
         <script>
             for(i = 5; i>=0; i--){
                 generatePick("activity"+i.toString(), i);
             }
         </script>
+
     </body>
 
 </html>
