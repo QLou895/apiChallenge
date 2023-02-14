@@ -60,8 +60,7 @@ function relabelData(dataName, dataValue){
     }
 
     return label;
-
-}
+} 
 async function generatePick(mydiv, num){
 
     var keys = [3621244, 8779876, 6613428, 5881647, 8092359];
